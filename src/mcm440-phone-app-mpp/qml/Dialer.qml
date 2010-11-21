@@ -127,7 +127,10 @@ Rectangle {
         id: callbutton
         x: col1origin
         y: 402
-        onClicked: {OfonoContext.test();
-            OfonoContext.call(display.text);}
+        onClicked: {
+            OfonoContext.test();
+            OfonoContext.callNumber(display.text);
+        }
     }
 }
+

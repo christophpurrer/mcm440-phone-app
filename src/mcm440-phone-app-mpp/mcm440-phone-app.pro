@@ -2,10 +2,10 @@ QT += declarative
 
 SOURCES += \
     main.cpp \
-    ofono.cpp
+    dialer.cpp
 
 HEADERS += \
-    ofono.h
+    dialer.h
 
 OTHER_FILES += \
     qml/DialerKey.qml \
@@ -15,4 +15,5 @@ OTHER_FILES += \
     img/dialerkey_up.png \
     img/dialerkey_down.png \
     img/dialer_display.png \
-    img/dialer_call.png
+    img/dialer_call.png \
+    README.txt

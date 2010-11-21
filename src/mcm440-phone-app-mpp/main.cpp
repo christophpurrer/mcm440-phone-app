@@ -2,7 +2,7 @@
 #include <QDeclarativeView>
 #include <QDeclarativeContext>
 #include <QVariant>
-#include <dialer.h>
+#include "src/gsm.h"
 
 /**
  * @file
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
     QApplication a(argc, argv);
 
     QDeclarativeView view;
-    view.rootContext()->setContextProperty("OfonoContext", new Dialer());
+    view.rootContext()->setContextProperty("OfonoContext", new Gsm());
     view.setSource(QUrl::fromLocalFile("qml/Dialer.qml"));
     view.show();
 

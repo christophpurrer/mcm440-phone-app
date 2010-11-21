@@ -1,11 +1,18 @@
 QT += declarative
 
 SOURCES += \
-    main.cpp \
-    dialer.cpp
+    srcgen/OfonoModem.cpp\
+    srcgen/OfonoSimManager.cpp\
+    srcgen/OfonoVoiceCallManager.cpp\
+    src/gsm.cpp \
+    main.cpp
+
 
 HEADERS += \
-    dialer.h
+    srcgen/OfonoModem.h\
+    srcgen/OfonoSimManager.h\
+    srcgen/OfonoVoiceCallManager.h\
+    src/gsm.h
 
 OTHER_FILES += \
     qml/DialerKey.qml \

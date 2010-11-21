@@ -1,5 +1,5 @@
-#ifndef DIALER_H
-#define DIALER_H
+#ifndef GSM_H
+#define GSM_H
 
 #include <QObject>
 
@@ -11,20 +11,20 @@
  *
  * @section DESCRIPTION
  *
- * The time class represents the the dialer interface
+ * The Gsm class represents the the dialer interface
  */
-class Dialer : public QObject
+class Gsm : public QObject
 {
     Q_OBJECT
 
 public:
 
     /**
-    * Constructor initializing the Dialer
+    * Constructor initializing the Gsm
     *
     * @param parent - reference to the parent QObject
     */
-    explicit Dialer(QObject *parent = 0);
+    explicit Gsm(QObject *parent = 0);
 
 
     Q_INVOKABLE void test();

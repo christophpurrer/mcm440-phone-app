@@ -1,5 +1,5 @@
-#include "dialer.h"
 #include <QDebug>
+#include "src/gsm.h"
 
 
 /**
@@ -10,25 +10,25 @@
  *
  * @section DESCRIPTION
  *
- * dialer.h implementation
+ * gsm.h implementation
  */
 
-Dialer::Dialer(QObject *parent) : QObject(parent) {
+Gsm::Gsm(QObject *parent) : QObject(parent) {
 }
 
-void Dialer::test() {
+void Gsm::test() {
     qDebug("test");
 }
 
-bool Dialer::callNumber(QString number) {
+bool Gsm::callNumber(QString number) {
     qDebug() << "calling" << number;
     return true;
 }
 
-bool Dialer::powerModemOn() {
+bool Gsm::powerModemOn() {
     return true;
 }
 
-bool Dialer::powerModemOff() {
+bool Gsm::powerModemOff() {
     return true;
 }

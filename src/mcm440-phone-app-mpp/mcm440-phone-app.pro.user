@@ -15,7 +15,7 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">Desktop</value>
    <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Target.DesktopTarget</value>
-   <value key="ProjectExplorer.Target.ActiveBuildConfiguration" type="int">0</value>
+   <value key="ProjectExplorer.Target.ActiveBuildConfiguration" type="int">3</value>
    <value key="ProjectExplorer.Target.ActiveRunConfiguration" type="int">0</value>
    <valuemap key="ProjectExplorer.Target.BuildConfiguration.0" type="QVariantMap">
     <valuemap key="ProjectExplorer.BuildConfiguration.BuildStep.0" type="QVariantMap">
@@ -34,35 +34,35 @@
      <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
       <value type="QString">-r</value>
       <value type="QString">qml/</value>
-      <value type="QString">../QtQmlPhoneApplication-build-desktop/qml</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/qml</value>
      </valuelist>
      <value key="ProjectExplorer.ProcessStep.Command" type="QString">cp</value>
      <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
-     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">/home/feistling/workspace/mcm440-phone-app/src/QtQmlPhoneApplication</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
      <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy qml files</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
     </valuemap>
     <valuemap key="ProjectExplorer.BuildConfiguration.BuildStep.3" type="QVariantMap">
      <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
       <value type="QString">-r</value>
-      <value type="QString">images/</value>
-      <value type="QString">../QtQmlPhoneApplication-build-desktop/images</value>
+      <value type="QString">img/</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/img</value>
      </valuelist>
      <value key="ProjectExplorer.ProcessStep.Command" type="QString">cp</value>
      <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
-     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">/home/feistling/workspace/mcm440-phone-app/src/QtQmlPhoneApplication</value>
-     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy images</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
+     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy images files</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
     </valuemap>
     <valuemap key="ProjectExplorer.BuildConfiguration.BuildStep.4" type="QVariantMap">
      <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
       <value type="QString">-r</value>
       <value type="QString">js/</value>
-      <value type="QString">../QtQmlPhoneApplication-build-desktop/js</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/js</value>
      </valuelist>
      <value key="ProjectExplorer.ProcessStep.Command" type="QString">cp</value>
-     <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
-     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">/home/feistling/workspace/mcm440-phone-app/src/QtQmlPhoneApplication</value>
+     <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">false</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
      <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy js files</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
     </valuemap>
@@ -82,7 +82,7 @@
     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">Qt in PATH Debug</value>
     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Qt4BuildConfiguration</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration" type="int">2</value>
-    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">/home/feistling/workspace/mcm440-phone-app/src/QtQmlPhoneApplication-build-desktop</value>
+    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp-build-desktop</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId" type="int">2</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.ToolChain" type="int">0</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild" type="bool">true</value>
@@ -100,7 +100,43 @@
      <valuelist key="Qt4ProjectManager.MakeStep.MakeArguments" type="QVariantList"/>
      <value key="Qt4ProjectManager.MakeStep.MakeCommand" type="QString"></value>
     </valuemap>
-    <value key="ProjectExplorer.BuildConfiguration.BuildStepsCount" type="int">2</value>
+    <valuemap key="ProjectExplorer.BuildConfiguration.BuildStep.2" type="QVariantMap">
+     <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
+      <value type="QString">-r</value>
+      <value type="QString">qml/</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/qml</value>
+     </valuelist>
+     <value key="ProjectExplorer.ProcessStep.Command" type="QString">cp</value>
+     <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
+     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy qml files</value>
+     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
+    </valuemap>
+    <valuemap key="ProjectExplorer.BuildConfiguration.BuildStep.3" type="QVariantMap">
+     <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
+      <value type="QString">-r</value>
+      <value type="QString">img/</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/img</value>
+     </valuelist>
+     <value key="ProjectExplorer.ProcessStep.Command" type="QString">cp</value>
+     <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
+     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy img files</value>
+     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
+    </valuemap>
+    <valuemap key="ProjectExplorer.BuildConfiguration.BuildStep.4" type="QVariantMap">
+     <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
+      <value type="QString">-r</value>
+      <value type="QString">js/</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/js</value>
+     </valuelist>
+     <value key="ProjectExplorer.ProcessStep.Command" type="QString">cp</value>
+     <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
+     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy js files</value>
+     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
+    </valuemap>
+    <value key="ProjectExplorer.BuildConfiguration.BuildStepsCount" type="int">5</value>
     <valuemap key="ProjectExplorer.BuildConfiguration.CleanStep.0" type="QVariantMap">
      <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">Make</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.MakeStep</value>
@@ -115,8 +151,8 @@
     <valuelist key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges" type="QVariantList"/>
     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">Qt in PATH Release</value>
     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Qt4BuildConfiguration</value>
-    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration" type="int">0</value>
-    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">/home/feistling/workspace/mcm440-phone-app/src/QtQmlPhoneApplication-build-desktop</value>
+    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration" type="int">2</value>
+    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp-build-desktop</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId" type="int">2</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.ToolChain" type="int">0</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild" type="bool">true</value>
@@ -150,7 +186,7 @@
     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">4.7.0 Debug</value>
     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Qt4BuildConfiguration</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration" type="int">2</value>
-    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">/home/feistling/workspace/mcm440-phone-app/src/QtQmlPhoneApplication-build-desktop</value>
+    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp-build-desktop</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId" type="int">4</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.ToolChain" type="int">0</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild" type="bool">true</value>
@@ -184,18 +220,18 @@
     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">4.7.0 Release</value>
     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Qt4BuildConfiguration</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration" type="int">0</value>
-    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">/home/feistling/workspace/mcm440-phone-app/src/QtQmlPhoneApplication-build-desktop</value>
+    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp-build-desktop</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId" type="int">4</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.ToolChain" type="int">0</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild" type="bool">true</value>
    </valuemap>
    <value key="ProjectExplorer.Target.BuildConfigurationCount" type="int">4</value>
    <valuemap key="ProjectExplorer.Target.RunConfiguration.0" type="QVariantMap">
-    <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">QtQmlPhoneApplication</value>
+    <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">mcm440-phone-app</value>
     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Qt4RunConfiguration</value>
     <value key="Qt4ProjectManager.Qt4RunConfiguration.BaseEnvironmentBase" type="int">2</value>
     <valuelist key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments" type="QVariantList"/>
-    <value key="Qt4ProjectManager.Qt4RunConfiguration.ProFile" type="QString">QtQmlPhoneApplication.pro</value>
+    <value key="Qt4ProjectManager.Qt4RunConfiguration.ProFile" type="QString">mcm440-phone-app.pro</value>
     <value key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix" type="bool">false</value>
     <value key="Qt4ProjectManager.Qt4RunConfiguration.UseTerminal" type="bool">false</value>
     <valuelist key="Qt4ProjectManager.Qt4RunConfiguration.UserEnvironmentChanges" type="QVariantList"/>

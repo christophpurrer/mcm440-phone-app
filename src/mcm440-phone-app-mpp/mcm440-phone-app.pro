@@ -1,4 +1,4 @@
-QT += declarative
+QT += dbus declarative
 
 SOURCES += \
     srcgen/OfonoModem.cpp\

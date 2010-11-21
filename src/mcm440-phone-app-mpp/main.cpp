@@ -21,7 +21,9 @@ int main(int argc, char **argv)
     QApplication a(argc, argv);
 
     QDeclarativeView view;
-    view.rootContext()->setContextProperty("OfonoContext", new Gsm());
+    Gsm *gsm = new Gsm();
+
+    view.rootContext()->setContextProperty("OfonoContext", gsm);
     view.setSource(QUrl::fromLocalFile("qml/Dialer.qml"));
     view.show();
 

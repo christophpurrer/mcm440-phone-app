@@ -2,6 +2,8 @@
 #define GSM_H
 
 #include <QObject>
+#include <QString>
+#include <QDBusVariant>
 
 /**
  * @file
@@ -29,6 +31,12 @@ public:
 
     Q_INVOKABLE void test();
 
+    /**
+    *
+    * @param bool - the current modem status
+    **/
+    Q_INVOKABLE bool getModemStatus();
+
 signals:
 
 public slots:
@@ -50,6 +58,11 @@ public slots:
     * turns the GSM modem off
     **/
     bool powerModemOff();
-};
 
+    /**
+    *
+    * Qt Slot for a D-Bus Signal to get notified about changes
+    **/
+    void propertyChanged(const QString &name, const QDBusVariant &value);
+};
 #endif

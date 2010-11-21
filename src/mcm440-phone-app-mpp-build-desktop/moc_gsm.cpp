@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'gsm.h'
 **
-** Created: Sun Nov 21 14:40:34 2010
+** Created: Sun Nov 21 15:38:10 2010
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Gsm[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,16 +34,20 @@ static const uint qt_meta_data_Gsm[] = {
       17,   10,    5,    4, 0x0a,
       37,    4,    5,    4, 0x0a,
       52,    4,    5,    4, 0x0a,
+      79,   68,    4,    4, 0x0a,
 
  // methods: signature, parameters, type, tag, flags
-      68,    4,    4,    4, 0x02,
+     117,    4,    4,    4, 0x02,
+     124,    4,    5,    4, 0x02,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Gsm[] = {
     "Gsm\0\0bool\0number\0callNumber(QString)\0"
-    "powerModemOn()\0powerModemOff()\0test()\0"
+    "powerModemOn()\0powerModemOff()\0"
+    "name,value\0propertyChanged(QString,QDBusVariant)\0"
+    "test()\0getModemStatus()\0"
 };
 
 const QMetaObject Gsm::staticMetaObject = {
@@ -81,10 +85,13 @@ int Gsm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
         case 2: { bool _r = powerModemOff();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 3: test(); break;
+        case 3: propertyChanged((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QDBusVariant(*)>(_a[2]))); break;
+        case 4: test(); break;
+        case 5: { bool _r = getModemStatus();
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
         default: ;
         }
-        _id -= 4;
+        _id -= 6;
     }
     return _id;
 }

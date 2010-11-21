@@ -14,9 +14,10 @@ Rectangle {
     property int row2origin: 162;
     property int row3origin: 242;
     property int row4origin: 322;
+    property int row5origin: 482;
 
     width: 320
-    height: 480
+    height: 580
 
     // DialerDisplay shows the typed in phone number
     DialerDisplay {
@@ -119,7 +120,7 @@ Rectangle {
         x: col3origin
         y: row4origin
         text: "#"
-        onClicked: {display.text += text;}
+        onClicked: { display.text += text;}
     }
 
     // buttons
@@ -128,9 +129,44 @@ Rectangle {
         x: col1origin
         y: 402
         onClicked: {
-            OfonoContext.test();
+            // OfonoContext.test();
             OfonoContext.callNumber(display.text);
         }
     }
-}
 
+    // on
+    DialerKey {
+        id: powerOnButton
+        x: col1origin
+        y: row5origin
+        text: "On"
+        onClicked: {
+            OfonoContext.powerModemOn();
+            modemStatus.text = OfonoContext.getModemStatus();
+        }
+    }
+
+    //
+    DialerKey {
+        id: modemStatus
+        x: col2origin
+        y: row5origin
+        text: "..."
+        onClicked: {
+            modemStatus.text = OfonoContext.getModemStatus();
+        }
+    }
+
+
+    // off
+    DialerKey {
+        id: powerOffButton
+        x: col3origin
+        y: row5origin
+        text: "Off"
+        onClicked: {
+            OfonoContext.powerModemOff();
+            modemStatus.text = OfonoContext.getModemStatus();
+        }
+    }
+}

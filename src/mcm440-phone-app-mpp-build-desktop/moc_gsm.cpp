@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'gsm.h'
 **
-** Created: Sun Nov 21 15:38:10 2010
+** Created: Sun Nov 21 16:09:03 2010
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -44,7 +44,7 @@ static const uint qt_meta_data_Gsm[] = {
 };
 
 static const char qt_meta_stringdata_Gsm[] = {
-    "Gsm\0\0bool\0number\0callNumber(QString)\0"
+    "Gsm\0\0bool\0number\0dialNumber(QString)\0"
     "powerModemOn()\0powerModemOff()\0"
     "name,value\0propertyChanged(QString,QDBusVariant)\0"
     "test()\0getModemStatus()\0"
@@ -79,7 +79,7 @@ int Gsm::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: { bool _r = callNumber((*reinterpret_cast< QString(*)>(_a[1])));
+        case 0: { bool _r = dialNumber((*reinterpret_cast< QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
         case 1: { bool _r = powerModemOn();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;

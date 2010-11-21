@@ -8,6 +8,7 @@
 #include <QDBusPendingReply>
 #include <QDBusVariant>
 
+#include "srcgen/OfonoVoiceCallManager.h"
 #include "srcgen/OfonoModem.h"
 #include "src/gsm.h"
 
@@ -22,36 +23,46 @@
  * gsm.h implementation
  */
 
+OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim", QDBusConnection::systemBus());
+OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim", QDBusConnection::systemBus());
+
 Gsm::Gsm(QObject *parent) : QObject(parent) {
+    this->isConnected=false;
 }
 
 void Gsm::test() {
     qDebug("test");
 }
 
-bool Gsm::callNumber(QString number) {
+bool Gsm::dialNumber(QString number) {
     qDebug() << "callNumber" << number;
-    return true;
+    this->isConnected = this->getModemStatus();
+    qDebug() << "modemStatus" << this->isConnected;
+    if( this->isConnected==true ){
+        ofonoVoicecallManager.Dial(number, "default");
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 bool Gsm::powerModemOn() {
     qDebug() << "powerModemOn";
-    OrgOfonoModemInterface ofono("org.ofono", "/phonesim", QDBusConnection::systemBus());
-    ofono.SetProperty("Powered", QDBusVariant(true));
+    ofonoModem.SetProperty("Powered", QDBusVariant(true));
     return true;
 }
 
 bool Gsm::powerModemOff() {
     qDebug() << "powerModemOff";
-    OrgOfonoModemInterface ofono("org.ofono", "/phonesim", QDBusConnection::systemBus());
-    ofono.SetProperty("Powered", QDBusVariant(false));
+    ofonoModem.SetProperty("Powered", QDBusVariant(false));
     return true;
 }
 
 bool Gsm::getModemStatus() {
-    OrgOfonoModemInterface ofono("org.ofono", "/phonesim", QDBusConnection::systemBus());
+    //    OrgOfonoModemInterface ofono("org.ofono", "/phonesim", QDBusConnection::systemBus());
     //    QDBusPendingReply<QVariantMap> properties = ofono.GetProperties();
-    QMap<QString, QVariant> mapProperties = ofono.GetProperties().value();
+    QMap<QString, QVariant> mapProperties = ofonoModem.GetProperties().value();
 
     qDebug() << mapProperties;
     qDebug() << mapProperties.contains("Powered");

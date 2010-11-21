@@ -19,6 +19,9 @@ class Gsm : public QObject
 {
     Q_OBJECT
 
+private:
+    bool isConnected;
+
 public:
 
     /**
@@ -45,7 +48,7 @@ public slots:
     *
     * @param number - the number to call
     **/
-    bool callNumber(QString number);
+    bool dialNumber(QString number);
 
     /**
     *

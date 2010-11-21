@@ -130,7 +130,7 @@ Rectangle {
         y: 402
         onClicked: {
             // OfonoContext.test();
-            OfonoContext.callNumber(display.text);
+            OfonoContext.dialNumber(display.text);
         }
     }
 

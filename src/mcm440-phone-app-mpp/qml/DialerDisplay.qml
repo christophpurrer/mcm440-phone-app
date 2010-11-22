@@ -6,20 +6,18 @@ import Qt 4.7
 **/
 Item {
     id:dialerdisplay
+    width: 320
+    height: 70
     property string text
-
-    Image {
-        id: buttonimage
-        source: "../img/dialer_display.png"
-    }
 
     Text {
         id: displaytext
         text: dialerdisplay.text
         font.pixelSize: 40
+        font.bold: true
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        anchors.fill: buttonimage
+        anchors.fill: dialerdisplay
     }
 }
 

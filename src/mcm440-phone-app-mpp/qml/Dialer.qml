@@ -7,17 +7,23 @@ import Qt 4.7
 **/
 Rectangle {
     // properties
-    property int col1origin: 5;
-    property int col2origin: 110;
-    property int col3origin: 215;
-    property int row1origin: 82;
-    property int row2origin: 162;
-    property int row3origin: 242;
-    property int row4origin: 322;
-    property int row5origin: 482;
+    property int col1origin: 0;
+    property int col2origin: 107;
+    property int col3origin: 214;
+    property int row1origin: 72;
+    property int row2origin: 142;
+    property int row3origin: 212;
+    property int row4origin: 282;
+    property int row5origin: 352;
 
     width: 320
-    height: 580
+    height: 480
+
+    //background image
+    Image {
+        id: buttonimage
+        source: "../img/dialerBG.png"
+    }
 
     // DialerDisplay shows the typed in phone number
     DialerDisplay {
@@ -123,7 +129,38 @@ Rectangle {
         onClicked: { display.text += text;}
     }
 
-    // buttons
+    DialerKey {
+        id: key_power
+        x: col1origin
+        y: row5origin
+        text: OfonoContext.getModemStatus() ? "OFF" : "ON"
+        fontsize: 30
+        onClicked: {
+            if(OfonoContext.getModemStatus()) {
+                OfonoContext.powerModemOff();
+            } else {
+                OfonoContext.powerModemOn();
+            }
+        }
+    }
+
+    DialerKey {
+        id: key_call
+        x: col2origin
+        y: row5origin
+        icon: "../img/dialerkey_call.png"
+        onClicked: { OfonoContext.dialNumber(display.text); }
+    }
+
+    DialerKey {
+        id: key_clear
+        x: col3origin
+        y: row5origin
+        icon: "../img/dialerkey_clear.png"
+        onClicked: { display.text = ""; }
+    }
+
+    /* buttons
     DialerButton {
         id: callbutton
         x: col1origin
@@ -168,5 +205,5 @@ Rectangle {
             OfonoContext.powerModemOff();
             modemStatus.text = OfonoContext.getModemStatus();
         }
-    }
+    }*/
 }

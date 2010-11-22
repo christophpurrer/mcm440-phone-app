@@ -19,8 +19,9 @@ OTHER_FILES += \
     qml/DialerDisplay.qml \
     qml/DialerButton.qml \
     qml/Dialer.qml \
-    img/dialerkey_up.png \
     img/dialerkey_down.png \
-    img/dialer_display.png \
-    img/dialer_call.png \
-    README.txt
+    README.txt \
+    js/dummy.js \
+    img/dialerBG.png \
+    img/dialerkey_clear.png \
+    img/dialerkey_call.png

@@ -7,7 +7,7 @@ import "addressbook"
 Rectangle {
     id:phoneAppMain
     width:320
-    height:520
+    height:480
 
     property string showComponent : "home"
 
@@ -24,11 +24,11 @@ Rectangle {
 
     AddressBookComponent {
         id:addressBook
-        x:640
+        x:320
     }
 
     // buttons to control the main application
-    Text {
+    /*Text {
         id:buttonHome
         x: 20
         y: 490
@@ -71,7 +71,7 @@ Rectangle {
                 phoneAppMain.showComponent = "addressBook"
             }
         }
-    }
+    }*/
 
     // states
     states: [
@@ -85,7 +85,7 @@ Rectangle {
                 target: dialer; x : 320
             }
             PropertyChanges {
-                target: addressBook; x : 640
+                target: addressBook; x : 320
             }
         },
         State {
@@ -98,17 +98,17 @@ Rectangle {
                 target: dialer; x : 0
             }
             PropertyChanges {
-                target: addressBook; x : 320
+                target: addressBook; x : 640
             }
         },
         State {
             name: "addressBookState";
             when: phoneAppMain.showComponent == "addressBook";
             PropertyChanges {
-                target: home; x : -640
+                target: home; x : -320
             }
             PropertyChanges {
-                target: dialer; x : -320
+                target: dialer; x : 320
             }
             PropertyChanges {
                 target: addressBook; x : 0

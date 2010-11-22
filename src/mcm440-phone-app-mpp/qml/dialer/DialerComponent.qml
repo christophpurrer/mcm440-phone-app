@@ -1,4 +1,5 @@
 import Qt 4.7
+import "../"
 
 /**
 * DialerComponent.qml is the main part of the application / qml file for the phone application and
@@ -16,15 +17,14 @@ Rectangle {
     property int row3origin: 212;
     property int row4origin: 282;
     property int row5origin: 352;
-
     property bool isCalling: false
 
     width: 320
-    height: 440
+    height: 480
 
     //background image
     Image {
-        id: buttonimage
+        id: background
         source: "../../img/dialerBG.png"
     }
 
@@ -179,6 +179,16 @@ Rectangle {
         onClicked: { display.text = ""; }
     }
 
+    //back button
+    BackButton {
+        x: 0
+        y: 450
+        width: 320
+        height: 20
+        onClicked: {
+            phoneAppMain.showComponent = "home"
+        }
+    }
 
     Connections {
         target: OfonoContext

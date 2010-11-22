@@ -12,3 +12,30 @@
 /src/mcm440-phone-app-mpp-build-desktop/qml/DialerDisplay.qml
 /src/mcm440-phone-app-mpp-build-desktop/qml/DialerKey.qml
 /src/mcm440-phone-app-mpp-build-desktop/qml/Dialer.qml
+/src/mcm440-phone-app-mpp-build-desktop/gsm.o
+/src/mcm440-phone-app-mpp-build-desktop/img/img/dialer_call.png
+/src/mcm440-phone-app-mpp-build-desktop/img/img/dialer_display.png
+/src/mcm440-phone-app-mpp-build-desktop/img/img/dialerkey_down.png
+/src/mcm440-phone-app-mpp-build-desktop/img/img/dialerkey_up.png
+/src/mcm440-phone-app-mpp-build-desktop/moc_gsm.cpp
+/src/mcm440-phone-app-mpp-build-desktop/moc_gsm.o
+/src/mcm440-phone-app-mpp-build-desktop/moc_OfonoModem.cpp
+/src/mcm440-phone-app-mpp-build-desktop/moc_OfonoModem.o
+/src/mcm440-phone-app-mpp-build-desktop/moc_OfonoSimManager.cpp
+/src/mcm440-phone-app-mpp-build-desktop/moc_OfonoSimManager.o
+/src/mcm440-phone-app-mpp-build-desktop/moc_OfonoVoiceCallManager.cpp
+/src/mcm440-phone-app-mpp-build-desktop/moc_OfonoVoiceCallManager.o
+/src/mcm440-phone-app-mpp-build-desktop/OfonoModem.o
+/src/mcm440-phone-app-mpp-build-desktop/OfonoSimManager.o
+/src/mcm440-phone-app-mpp-build-desktop/OfonoVoiceCallManager.o
+/src/mcm440-phone-app-mpp-build-desktop/qml/qml/DialerButton.qml
+/src/mcm440-phone-app-mpp-build-desktop/qml/qml/DialerDisplay.qml
+/src/mcm440-phone-app-mpp-build-desktop/qml/qml/DialerKey.qml
+/src/mcm440-phone-app-mpp-build-desktop/qml/qml/Dialer.qml
+<<<<<<< HEAD
+/src/mcm440-phone-app-mpp-build-desktop/img/dialerBG.png
+/src/mcm440-phone-app-mpp-build-desktop/img/dialerkey_call.png
+/src/mcm440-phone-app-mpp-build-desktop/img/dialerkey_clear.png
+/src/mcm440-phone-app-mpp-build-desktop/js/dummy.js
+=======
+>>>>>>> 4024083adaa1815a60a18abbc3e54e445f14ec79

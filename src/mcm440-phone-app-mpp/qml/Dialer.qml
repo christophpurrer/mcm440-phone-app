@@ -129,6 +129,7 @@ Rectangle {
         onClicked: { display.text += text;}
     }
 
+    //power toggle button
     DialerKey {
         id: key_power
         x: col1origin
@@ -144,6 +145,7 @@ Rectangle {
         }
     }
 
+    //call button
     DialerKey {
         id: key_call
         x: col2origin
@@ -152,6 +154,7 @@ Rectangle {
         onClicked: { OfonoContext.dialNumber(display.text); }
     }
 
+    //clear button
     DialerKey {
         id: key_clear
         x: col3origin
@@ -159,51 +162,4 @@ Rectangle {
         icon: "../img/dialerkey_clear.png"
         onClicked: { display.text = ""; }
     }
-
-    /* buttons
-    DialerButton {
-        id: callbutton
-        x: col1origin
-        y: 402
-        onClicked: {
-            // OfonoContext.test();
-            OfonoContext.dialNumber(display.text);
-        }
-    }
-
-    // on
-    DialerKey {
-        id: powerOnButton
-        x: col1origin
-        y: row5origin
-        text: "On"
-        onClicked: {
-            OfonoContext.powerModemOn();
-            modemStatus.text = OfonoContext.getModemStatus();
-        }
-    }
-
-    //
-    DialerKey {
-        id: modemStatus
-        x: col2origin
-        y: row5origin
-        text: "..."
-        onClicked: {
-            modemStatus.text = OfonoContext.getModemStatus();
-        }
-    }
-
-
-    // off
-    DialerKey {
-        id: powerOffButton
-        x: col3origin
-        y: row5origin
-        text: "Off"
-        onClicked: {
-            OfonoContext.powerModemOff();
-            modemStatus.text = OfonoContext.getModemStatus();
-        }
-    }*/
 }

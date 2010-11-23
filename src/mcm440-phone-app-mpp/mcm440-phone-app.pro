@@ -24,4 +24,5 @@ OTHER_FILES += \
     js/dummy.js \
     img/dialerBG.png \
     img/dialerkey_clear.png \
-    img/dialerkey_call.png
+    img/dialerkey_call.png \
+    test.txt

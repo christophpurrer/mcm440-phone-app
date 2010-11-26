@@ -12,6 +12,7 @@ HEADERS += \
     srcgen/OfonoModem.h\
     srcgen/OfonoSimManager.h\
     srcgen/OfonoVoiceCallManager.h\
+    src/CPhoneState.h\
     src/gsm.h
 
 OTHER_FILES += \

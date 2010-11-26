@@ -11,10 +11,16 @@ Item {
     property string text;
     property int fontsize: 40;
     property string icon;
+    property string backgroundimage;
     signal clicked
 
     Image {
         id: buttonimage
+        source: backgroundimage
+    }
+
+    Image {
+        id: buttonoverlay
         source: "../img/dialerkey_down.png"
         opacity: 0
     }
@@ -27,7 +33,7 @@ Item {
         color: "#ffffff"
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        anchors.fill: buttonimage
+        anchors.fill: buttonoverlay
     }
 
     Image {
@@ -37,7 +43,7 @@ Item {
 
     MouseArea {
         id: mouseregion
-        anchors.fill: buttonimage
+        anchors.fill: buttonoverlay
         onClicked: {dialerkey.clicked();}
     }
 
@@ -46,7 +52,7 @@ Item {
             name: "clicked"
             when: mouseregion.pressed == true
             PropertyChanges {
-                target:buttonimage; opacity:100
+                target:buttonoverlay; opacity:100
             }
         }
     ]

@@ -12,7 +12,6 @@ HEADERS += \
     srcgen/OfonoModem.h\
     srcgen/OfonoSimManager.h\
     srcgen/OfonoVoiceCallManager.h\
-    src/CPhoneState.h\
     src/gsm.h
 
 OTHER_FILES += \
@@ -26,4 +25,6 @@ OTHER_FILES += \
     img/dialerBG.png \
     img/dialerkey_clear.png \
     img/dialerkey_call.png \
-    test.txt
+    test.txt \
+    img/dialerkey_red.png \
+    img/dialerkey_green.png

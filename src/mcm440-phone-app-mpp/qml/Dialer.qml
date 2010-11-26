@@ -151,6 +151,7 @@ Rectangle {
         x: col2origin
         y: row5origin
         icon: "../img/dialerkey_call.png"
+        backgroundimage: "../img/dialerkey_green.png"
         onClicked: { OfonoContext.dialNumber(display.text); }
     }
 

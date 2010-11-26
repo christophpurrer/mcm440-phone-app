@@ -1,0 +1,12 @@
+1.) Can we really make phone calls with our application?
+
+2.) Do we really need to implement an address book or a fake address book?
+
+3.) I can not build bitbake on my Ubuntu 10.10 x64 anymore. It worked before.
+
+4.) We don't know how should we do this bitbake / layer stuff
+
+5.) Can I use:
+      ~/angstrom/sources/openembedded \
+    in bblayers.conf?
+

@@ -25,6 +25,6 @@ OTHER_FILES += \
     img/dialerBG.png \
     img/dialerkey_clear.png \
     img/dialerkey_call.png \
-    test.txt \
     img/dialerkey_red.png \
-    img/dialerkey_green.png
+    img/dialerkey_green.png \
+    Questions.txt

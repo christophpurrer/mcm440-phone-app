@@ -27,4 +27,5 @@ OTHER_FILES += \
     img/dialerkey_call.png \
     img/dialerkey_red.png \
     img/dialerkey_green.png \
-    Questions.txt
+    Questions.txt \
+    TODOS.txt

@@ -1,0 +1,7 @@
+The application should have a:
+    * start screen (turns on the modem)
+    * dial screen to dial numbers
+    * status screen while a call is initiated
+    * a simple / fake address book screen
+
+The application should be albe to make AND accept phone calls

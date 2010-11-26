@@ -32,3 +32,10 @@
 /src/mcm440-phone-app-mpp-build-desktop/qml/qml/DialerDisplay.qml
 /src/mcm440-phone-app-mpp-build-desktop/qml/qml/DialerKey.qml
 /src/mcm440-phone-app-mpp-build-desktop/qml/qml/Dialer.qml
+<<<<<<< HEAD
+/src/mcm440-phone-app-mpp-build-desktop/img/dialerBG.png
+/src/mcm440-phone-app-mpp-build-desktop/img/dialerkey_call.png
+/src/mcm440-phone-app-mpp-build-desktop/img/dialerkey_clear.png
+/src/mcm440-phone-app-mpp-build-desktop/js/dummy.js
+=======
+>>>>>>> 4024083adaa1815a60a18abbc3e54e445f14ec79

@@ -11,7 +11,7 @@ Use the following folder structure
 
 $ cd
 $ cp angstrom
-$ ln -s /home/USER_NAME/workspace/mcm440-phone-app/oe/angstrom/mcm440-layer/ mcm440-layer
+$ ln -s /home/USER_NAME/workspace/mcm440-phone-app/oe/angstrom/mcm440-layer/ home/USER_NAME/angstrom/mcm440-layer
 
 
 3.) Copy /home/USER_NAME/workspace/mcm440-phone-app/oe/angstrom/build/config/bblayers.conf

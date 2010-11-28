@@ -17,5 +17,7 @@ $ ln -s /home/USER_NAME/workspace/mcm440-phone-app/oe/angstrom/mcm440-layer/ hom
 3.) Copy /home/USER_NAME/workspace/mcm440-phone-app/oe/angstrom/build/config/bblayers.conf
 	to /home/USER_NAME/angstrom/build/config
 
+4.) Change the parameter ANGSTROM_HOME in /home/USER_NAME/angstrom/build/config/bblayers.conf to fit to your system
+
 
 

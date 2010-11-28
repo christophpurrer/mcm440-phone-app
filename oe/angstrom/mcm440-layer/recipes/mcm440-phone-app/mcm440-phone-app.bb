@@ -4,7 +4,7 @@ PR = "r2"
 
 inherit qmake2
 
-SRC_URI = "git://github.com/christophpurrer/mcm440‐phone‐app.git"
+SRC_URI = "git://github.com/christophpurrer/mcm440-phone-app.git;protocol=http"
 
 S = "${WORKDIR}/${P}"
 

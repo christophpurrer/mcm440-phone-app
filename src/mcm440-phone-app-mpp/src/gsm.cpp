@@ -23,11 +23,15 @@
  * gsm.h implementation
  */
 
-OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim", QDBusConnection::systemBus());
-OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim", QDBusConnection::systemBus());
+OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim0", QDBusConnection::systemBus());
+OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim0", QDBusConnection::systemBus());
 
 Gsm::Gsm(QObject *parent) : QObject(parent) {
     this->isConnected=false;
+
+    qDebug()<<"start";
+
+    QObject::connect( &ofonoModem, SIGNAL(PropertyChanged(QString,QDBusVariant)), this, SLOT(propertyChanged(QString,QDBusVariant)));
 }
 
 void Gsm::test() {
@@ -50,12 +54,14 @@ bool Gsm::dialNumber(QString number) {
 bool Gsm::powerModemOn() {
     qDebug() << "powerModemOn";
     ofonoModem.SetProperty("Powered", QDBusVariant(true));
+    //this->isConnected = true;
     return true;
 }
 
 bool Gsm::powerModemOff() {
     qDebug() << "powerModemOff";
     ofonoModem.SetProperty("Powered", QDBusVariant(false));
+    //this->isConnected = false;
     return true;
 }
 
@@ -73,6 +79,9 @@ bool Gsm::getModemStatus() {
 }
 
 void Gsm::propertyChanged(const QString &name, const QDBusVariant &value) {
+
+    qDebug() << "propertyChanged2";
+
     if(name == "Calls") {
         const QVariant var = value.variant();
         const QDBusArgument arg = var.value<QDBusArgument>();

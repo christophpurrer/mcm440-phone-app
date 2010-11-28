@@ -21,7 +21,7 @@ Item {
 
     Image {
         id: buttonoverlay
-        source: "../img/dialerkey_down.png"
+        source: "../../img/dialerkey_down.png"
         opacity: 0
     }
 

@@ -1,7 +1,7 @@
 import Qt 4.7
 
 /**
-* Dialer.qml is the main application / qml file for the phone application and
+* DialerComponent.qml is the main part of the application / qml file for the phone application and
  * shows the number pad screen / state on default
  *
 **/
@@ -17,12 +17,12 @@ Rectangle {
     property int row5origin: 352;
 
     width: 320
-    height: 480
+    height: 440
 
     //background image
     Image {
         id: buttonimage
-        source: "../img/dialerBG.png"
+        source: "../../img/dialerBG.png"
     }
 
     // DialerDisplay shows the typed in phone number
@@ -150,8 +150,8 @@ Rectangle {
         id: key_call
         x: col2origin
         y: row5origin
-        icon: "../img/dialerkey_call.png"
-        backgroundimage: "../img/dialerkey_green.png"
+        icon: "../../img/dialerkey_call.png"
+        backgroundimage: "../../img/dialerkey_green.png"
         onClicked: { OfonoContext.dialNumber(display.text); }
     }
 
@@ -160,7 +160,7 @@ Rectangle {
         id: key_clear
         x: col3origin
         y: row5origin
-        icon: "../img/dialerkey_clear.png"
+        icon: "../../img/dialerkey_clear.png"
         onClicked: { display.text = ""; }
     }
 }

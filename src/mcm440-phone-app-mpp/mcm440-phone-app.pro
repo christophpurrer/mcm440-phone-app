@@ -15,17 +15,23 @@ HEADERS += \
     src/gsm.h
 
 OTHER_FILES += \
-    qml/DialerKey.qml \
-    qml/DialerDisplay.qml \
-    qml/DialerButton.qml \
-    qml/Dialer.qml \
-    img/dialerkey_down.png \
-    README.txt \
-    js/dummy.js \
+    ## QML
+    qml/PhoneAppMain.qml \
+    qml/dialer/DialerKey.qml \
+    qml/dialer/DialerDisplay.qml \
+    qml/dialer/DialerComponent.qml \
+    qml/home/HomeComponent.qml \
+    qml/addressbook/AddressBookComponent.qml \
+    ## IMG
     img/dialerBG.png \
-    img/dialerkey_clear.png \
     img/dialerkey_call.png \
-    img/dialerkey_red.png \
+    img/dialerkey_clear.png \
+    img/dialerkey_down.png \
     img/dialerkey_green.png \
-    Questions.txt \
-    TODOS.txt
+    img/dialerkey_red.png \
+    ## JS
+    js/dummy.js \
+    ## TXT
+    txt/README.txt \
+    txt/Questions.txt \
+    txt/TODOS.txt

@@ -13,6 +13,7 @@ Rectangle {
     // define all the UI components
     HomeComponent {
         id:home
+        x:0
     }
 
     DialerComponent {
@@ -97,7 +98,7 @@ Rectangle {
     transitions: [
         Transition {
             from: ""; to: "homeState"; reversible: true
-            NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InBounce }
+            NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InCubic }
         },
 
         Transition {

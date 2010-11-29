@@ -35,3 +35,6 @@ OTHER_FILES += \
     txt/README.txt \
     txt/Questions.txt \
     txt/TODOS.txt
+
+RESOURCES += \
+    main.qrc

@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/dialerBG.png</file>
+        <file>img/dialerkey_call.png</file>
+        <file>img/dialerkey_clear.png</file>
+        <file>img/dialerkey_down.png</file>
+        <file>img/dialerkey_green.png</file>
+        <file>img/dialerkey_red.png</file>
+        <file>qml/PhoneAppMain.qml</file>
+        <file>qml/addressbook/AddressBookComponent.qml</file>
+        <file>qml/dialer/DialerComponent.qml</file>
+        <file>qml/dialer/DialerDisplay.qml</file>
+        <file>qml/dialer/DialerKey.qml</file>
+        <file>qml/home/HomeComponent.qml</file>
+    </qresource>
+</RCC>

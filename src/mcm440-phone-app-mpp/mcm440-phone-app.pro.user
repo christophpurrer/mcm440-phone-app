@@ -15,7 +15,7 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">Desktop</value>
    <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Target.DesktopTarget</value>
-   <value key="ProjectExplorer.Target.ActiveBuildConfiguration" type="int">1</value>
+   <value key="ProjectExplorer.Target.ActiveBuildConfiguration" type="int">0</value>
    <value key="ProjectExplorer.Target.ActiveRunConfiguration" type="int">0</value>
    <valuemap key="ProjectExplorer.Target.BuildConfiguration.0" type="QVariantMap">
     <valuemap key="ProjectExplorer.BuildConfiguration.BuildStep.0" type="QVariantMap">
@@ -66,7 +66,19 @@
      <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy js files</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
     </valuemap>
-    <value key="ProjectExplorer.BuildConfiguration.BuildStepsCount" type="int">5</value>
+    <valuemap key="ProjectExplorer.BuildConfiguration.BuildStep.5" type="QVariantMap">
+     <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
+      <value type="QString">-r</value>
+      <value type="QString">main.qrc</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/</value>
+     </valuelist>
+     <value key="ProjectExplorer.ProcessStep.Command" type="QString">cp</value>
+     <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
+     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy qrc files</value>
+     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
+    </valuemap>
+    <value key="ProjectExplorer.BuildConfiguration.BuildStepsCount" type="int">6</value>
     <valuemap key="ProjectExplorer.BuildConfiguration.CleanStep.0" type="QVariantMap">
      <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">Make</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.MakeStep</value>
@@ -109,7 +121,18 @@
      <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">clean js files</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
     </valuemap>
-    <value key="ProjectExplorer.BuildConfiguration.CleanStepsCount" type="int">4</value>
+    <valuemap key="ProjectExplorer.BuildConfiguration.CleanStep.4" type="QVariantMap">
+     <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
+      <value type="QString">-r</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/main.qrc</value>
+     </valuelist>
+     <value key="ProjectExplorer.ProcessStep.Command" type="QString">rm</value>
+     <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
+     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">clean qrc files</value>
+     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
+    </valuemap>
+    <value key="ProjectExplorer.BuildConfiguration.CleanStepsCount" type="int">5</value>
     <value key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment" type="bool">false</value>
     <valuelist key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges" type="QVariantList"/>
     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">Qt in PATH Debug</value>
@@ -169,7 +192,19 @@
      <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy js files</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
     </valuemap>
-    <value key="ProjectExplorer.BuildConfiguration.BuildStepsCount" type="int">5</value>
+    <valuemap key="ProjectExplorer.BuildConfiguration.BuildStep.5" type="QVariantMap">
+     <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
+      <value type="QString">-r</value>
+      <value type="QString">main.qrc</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/</value>
+     </valuelist>
+     <value key="ProjectExplorer.ProcessStep.Command" type="QString">cp</value>
+     <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
+     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy qrc files</value>
+     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
+    </valuemap>
+    <value key="ProjectExplorer.BuildConfiguration.BuildStepsCount" type="int">6</value>
     <valuemap key="ProjectExplorer.BuildConfiguration.CleanStep.0" type="QVariantMap">
      <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">Make</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.MakeStep</value>
@@ -212,7 +247,18 @@
      <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">clean js files</value>
      <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
     </valuemap>
-    <value key="ProjectExplorer.BuildConfiguration.CleanStepsCount" type="int">4</value>
+    <valuemap key="ProjectExplorer.BuildConfiguration.CleanStep.4" type="QVariantMap">
+     <valuelist key="ProjectExplorer.ProcessStep.Arguments" type="QVariantList">
+      <value type="QString">-r</value>
+      <value type="QString">../mcm440-phone-app-mpp-build-desktop/main.qrc</value>
+     </valuelist>
+     <value key="ProjectExplorer.ProcessStep.Command" type="QString">rm</value>
+     <value key="ProjectExplorer.ProcessStep.Enabled" type="bool">true</value>
+     <value key="ProjectExplorer.ProcessStep.WorkingDirectory" type="QString">workspace/mcm440-phone-app/src/mcm440-phone-app-mpp</value>
+     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">copy qrc files</value>
+     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">ProjectExplorer.ProcessStep</value>
+    </valuemap>
+    <value key="ProjectExplorer.BuildConfiguration.CleanStepsCount" type="int">5</value>
     <value key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment" type="bool">false</value>
     <valuelist key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges" type="QVariantList"/>
     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString">Qt in PATH Release</value>

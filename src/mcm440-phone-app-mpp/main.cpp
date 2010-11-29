@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 
     view.rootContext()->setContextProperty("OfonoContext", gsm);
     view.setSource(QUrl::fromLocalFile("qml/PhoneAppMain.qml"));
+    //view.setSource(QUrl("qrc:/main.qrc"));
     view.show();
 
     return a.exec();

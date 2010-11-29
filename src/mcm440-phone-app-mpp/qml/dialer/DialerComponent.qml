@@ -139,8 +139,10 @@ Rectangle {
         onClicked: {
             if(OfonoContext.getModemStatus()) {
                 OfonoContext.powerModemOff();
+                OfonoContext.getModemStatus() ? "OFF" : "ON"
             } else {
                 OfonoContext.powerModemOn();
+                OfonoContext.getModemStatus() ? "OFF" : "ON"
             }
         }
     }

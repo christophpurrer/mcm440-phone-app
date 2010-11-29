@@ -23,7 +23,7 @@
  * gsm.h implementation
  */
 
-OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim0", QDBusConnection::systemBus());
+OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim", QDBusConnection::systemBus());
 OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim0", QDBusConnection::systemBus());
 
 Gsm::Gsm(QObject *parent) : QObject(parent) {

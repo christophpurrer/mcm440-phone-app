@@ -5,7 +5,7 @@
     >> yes
 
 3.) I can not build bitbake on my Ubuntu 10.10 x64 anymore. It worked before.
-
+    >> sovled
 
 4.) We don't know how should we do this bitbake / layer stuff
     >> added a basic layer to src/oe ...

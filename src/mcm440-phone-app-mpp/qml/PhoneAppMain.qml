@@ -77,17 +77,35 @@ Rectangle {
             PropertyChanges {
                 target: home; x : 0
             }
+            PropertyChanges {
+                target: dialer; x : 320
+            }
+            PropertyChanges {
+                target: addressBook; x : 640
+            }
         },
         State {
             name: "dialerState";
             when: phoneAppMain.showComponent == "dialer";
             PropertyChanges {
+                target: home; x : -320
+            }
+            PropertyChanges {
                 target: dialer; x : 0
+            }
+            PropertyChanges {
+                target: addressBook; x : 320
             }
         },
         State {
             name: "addressBookState";
             when: phoneAppMain.showComponent == "addressBook";
+            PropertyChanges {
+                target: home; x : -640
+            }
+            PropertyChanges {
+                target: dialer; x : -320
+            }
             PropertyChanges {
                 target: addressBook; x : 0
             }
@@ -97,18 +115,18 @@ Rectangle {
     // transitions
     transitions: [
         Transition {
-            from: ""; to: "homeState"; reversible: true
-            NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InCubic }
+            to: "homeState"; reversible: true
+            NumberAnimation { properties: "x"; duration: 500 }
         },
 
         Transition {
-            from: ""; to: "dialerState"; reversible: true
-            NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InBounce }
+            to: "dialerState"; reversible: true
+            NumberAnimation { properties: "x"; duration: 500 }
         },
 
         Transition {
-            from: ""; to: "addressBookState"; reversible: true
-            NumberAnimation { properties: "x"; duration: 500; easing.type: Easing.InBounce }
+            to: "addressBookState"; reversible: true
+            NumberAnimation { properties: "x"; duration: 500 }
         }
     ]
 }

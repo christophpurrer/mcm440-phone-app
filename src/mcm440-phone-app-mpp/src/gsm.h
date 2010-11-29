@@ -9,7 +9,7 @@
  * @file
  * @author  Christoph Purrer <S1010455012@students.fh-hagenberg.at>
  * @author  Kathrin Probst <S0910629019@students.fh-hagenberg.at>
- * @version 0.1
+ * @version 0.2
  *
  * @section DESCRIPTION
  *
@@ -23,16 +23,12 @@ private:
     bool isConnected;
 
 public:
-
     /**
     * Constructor initializing the Gsm
     *
     * @param parent - reference to the parent QObject
     */
     explicit Gsm(QObject *parent = 0);
-
-
-    Q_INVOKABLE void test();
 
     /**
     *
@@ -41,15 +37,10 @@ public:
     Q_INVOKABLE bool getModemStatus();
 
 signals:
+    void incomingCall(QString id);
+    void outgoingCall(QString id);
 
-public slots:
-
-    /**
-    *
-    * @param number - the number to call
-    **/
-    bool dialNumber(QString number);
-
+public slots:    
     /**
     *
     * turns the GSM moden on
@@ -62,10 +53,41 @@ public slots:
     **/
     bool powerModemOff();
 
+
     /**
     *
-    * Qt Slot for a D-Bus Signal to get notified about changes
+    * @param number - the number to call
     **/
-    void propertyChanged(const QString &name, const QDBusVariant &value);
+    bool dialNumber(QString number);
+
+    /**
+    *
+    * terminates all phone calls
+    **/
+    bool hangupAll();
+
+
+    /**
+    *
+    * Qt Slot for a D-Bus Signal to get notified about modem changes
+    **/
+    void modemPropertyChanged(const QString &name, const QDBusVariant &value);
+
+    /**
+    *
+<<<<<<< HEAD
+    * Qt Slot for a D-Bus Signal to get notified about voicecallManager changes
+    **/
+=======
+    * Qt Slot for a D-Bus Signal to get notified about modem changes
+    **/
+    void modemPropertyChanged(const QString &name, const QDBusVariant &value);
+
+    /**
+    *
+    * Qt Slot for a D-Bus Signal to get notified about voicecallManager changes
+    **/
+>>>>>>> 1356654845a11eb00b463c8ae9a7b32b06af2f3d
+    void voicecallManagerPropertyChanged(const QString &name, const QDBusVariant &value);
 };
 #endif

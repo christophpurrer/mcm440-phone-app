@@ -1,4 +1,5 @@
 import Qt 4.7
+import "callhandling"
 import "dialer"
 import "home"
 import "addressbook"
@@ -28,6 +29,7 @@ Rectangle {
 
     // buttons to control the main application
     Text {
+        id:buttonHome
         x: 20
         y: 490
         color: "blue"
@@ -42,6 +44,7 @@ Rectangle {
     }
 
     Text {
+        id:buttonCall
         x: 80
         y: 490
         color: "red"
@@ -56,6 +59,7 @@ Rectangle {
     }
 
     Text {
+        id:buttonAddressBook
         x: 140
         y: 490
         color: "green"
@@ -129,4 +133,33 @@ Rectangle {
             NumberAnimation { properties: "x"; duration: 500 }
         }
     ]
+
+    Connections {
+        target: OfonoContext
+        onIncomingCall: {
+            console.log("QML: Incoming Call: " + id);
+            phoneAppMain.showAcceptCallDialog(true);
+        }
+    }
+
+
+    function showAcceptCallDialog(show) {
+        if( show == true ) {
+            callingHandling.visible=true;
+//            buttonAddressBook.enabled=false;
+//            buttonCall.enabled=false;
+//            buttonHome.enabled=false;
+        }
+        else {
+            callingHandling.opacity=0;
+//            buttonAddressBook.visible=false;
+//            buttonCall.enabled=true;
+//            buttonHome.enabled=true;
+        }
+    }
+
+    CallhandlingComponent {
+        id:callingHandling
+        visible:false
+    }
 }

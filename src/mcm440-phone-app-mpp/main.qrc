@@ -12,5 +12,8 @@
         <file>img/dialerkey_down.png</file>
         <file>img/dialerkey_green.png</file>
         <file>img/dialerkey_red.png</file>
+        <file>qml/addressbook/AddressEntry.qml</file>
+        <file>img/avatar.png</file>
+        <file>qml/callhandling/CallhandlingComponent.qml</file>
     </qresource>
 </RCC>

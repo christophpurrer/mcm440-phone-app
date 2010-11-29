@@ -20,6 +20,7 @@ OTHER_FILES += \
     qml/dialer/DialerKey.qml \
     qml/dialer/DialerDisplay.qml \
     qml/dialer/DialerComponent.qml \
+    qml/callhandling/CallhandlingComponent.qml \
     qml/home/HomeComponent.qml \
     qml/addressbook/AddressBookComponent.qml \
     ## IMG
@@ -35,7 +36,8 @@ OTHER_FILES += \
     txt/README.txt \
     txt/Questions.txt \
     txt/TODOS.txt \
-    txt/TODOS_DONE.txt
+    txt/TODOS_DONE.txt \
+    qml/addressbook/AddressEntry.qml
 
 RESOURCES += \
     main.qrc

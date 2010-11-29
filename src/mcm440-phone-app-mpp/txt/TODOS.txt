@@ -4,8 +4,9 @@
 
 * main.qrc does not work
 
-* Add QML / Qt / C++ functionalities as listened below
 
+
+* Add QML / Qt / C++ functionalities as listened below
 
 The application should have a:
     * start screen (turns on the modem)

@@ -37,7 +37,6 @@ Gsm::Gsm(QObject *parent) : QObject(parent) {
     QObject::connect( &ofonoVoicecallManager, SIGNAL(PropertyChanged(QString,QDBusVariant)), this, SLOT(voicecallManagerPropertyChanged(QString,QDBusVariant)));
 }
 
-<<<<<<< HEAD
 // turns the modem on
 bool Gsm::powerModemOn() {
     qDebug() << "powerModemOn";
@@ -52,14 +51,6 @@ bool Gsm::powerModemOff() {
     return true;
 }
 
-
-=======
-
-void Gsm::test() {
-    qDebug("test");
-}
-
->>>>>>> 1356654845a11eb00b463c8ae9a7b32b06af2f3d
 // dials a number
 bool Gsm::dialNumber(QString number) {
     // qDebug() << "callNumber" << number;
@@ -75,24 +66,9 @@ bool Gsm::dialNumber(QString number) {
     }
 }
 
-<<<<<<< HEAD
 // hangup all phone calls
 bool Gsm::hangupAll() {
     ofonoVoicecallManager.HangupAll();
-=======
-// turns the modem on
-bool Gsm::powerModemOn() {
-    qDebug() << "powerModemOn";
-    ofonoModem.SetProperty("Powered", QDBusVariant(true));   
-    return true;
-}
-
-// shuts the modem down
-bool Gsm::powerModemOff() {
-    qDebug() << "powerModemOff";
-    ofonoModem.SetProperty("Powered", QDBusVariant(false));    
-    return true;
->>>>>>> 1356654845a11eb00b463c8ae9a7b32b06af2f3d
 }
 
 // returns the modemStatus
@@ -118,11 +94,7 @@ void Gsm::modemPropertyChanged(const QString &name, const QDBusVariant &value) {
     arg >> values;
     qDebug() << values;
 
-<<<<<<< HEAD
-    if(name == "Calls") {     
-=======
     if(name == "Calls") {
->>>>>>> 1356654845a11eb00b463c8ae9a7b32b06af2f3d
     }
     else if(name == "Features") {
     }
@@ -135,27 +107,11 @@ void Gsm::modemPropertyChanged(const QString &name, const QDBusVariant &value) {
     else if(name == "Online") {
     }
     else if(name == "Powered") {
-<<<<<<< HEAD
-    }
-    else if(name == "Revision") {
-    }
-    else if(name == "Serial") {
-=======
->>>>>>> 1356654845a11eb00b463c8ae9a7b32b06af2f3d
     }
     else if(name == "Revision") {
     }
     else if(name == "Serial") {
     }
-}
-
-void Gsm::voicecallManagerPropertyChanged(const QString &name, const QDBusVariant &value) {
-    qDebug() << "voicecallManagerPropertyChanged";
-    const QVariant var = value.variant();
-    const QDBusArgument arg = var.value<QDBusArgument>();
-    QList<QString> values;
-    arg >> values;
-    qDebug() << values;
 }
 
 void Gsm::voicecallManagerPropertyChanged(const QString &name, const QDBusVariant &value) {

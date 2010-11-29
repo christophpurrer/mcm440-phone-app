@@ -75,19 +75,8 @@ public slots:
 
     /**
     *
-<<<<<<< HEAD
     * Qt Slot for a D-Bus Signal to get notified about voicecallManager changes
     **/
-=======
-    * Qt Slot for a D-Bus Signal to get notified about modem changes
-    **/
-    void modemPropertyChanged(const QString &name, const QDBusVariant &value);
-
-    /**
-    *
-    * Qt Slot for a D-Bus Signal to get notified about voicecallManager changes
-    **/
->>>>>>> 1356654845a11eb00b463c8ae9a7b32b06af2f3d
     void voicecallManagerPropertyChanged(const QString &name, const QDBusVariant &value);
 };
 #endif

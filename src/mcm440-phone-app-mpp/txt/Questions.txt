@@ -13,5 +13,5 @@
 5.) Can I use:
       ~/angstrom/sources/openembedded \
     in bblayers.conf?
-    >> should work
+    >> did not work. Created ANSTROM_HOME variable
 

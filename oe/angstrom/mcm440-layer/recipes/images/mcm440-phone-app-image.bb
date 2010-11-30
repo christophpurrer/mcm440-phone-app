@@ -1,6 +1,6 @@
 #mcm440-phone-app-image
 #gives you a an awesome beagleboard image with fancy functionality
-PR = "r6"
+PR = "r7"
 
 require recipes/images/base-image.bb
 
@@ -14,7 +14,7 @@ IMAGE_INSTALL += " \
 	"
 # mcm440-phone-app \	
 
-export IMAGE_BASENAME = "mcm440-phone-app-mpp-image"
+export IMAGE_BASENAME = "mcm440-phone-app-image"
 
 #inherit image
 

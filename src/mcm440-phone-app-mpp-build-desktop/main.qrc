@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/addressbook/AddressBookComponent.qml</file>
+        <file>qml/addressbook/AddressEntry.qml</file>
+        <file>qml/callhandling/CallhandlingComponent.qml</file>
+        <file>qml/dialer/DialerComponent.qml</file>
+        <file>qml/dialer/DialerDisplay.qml</file>
+        <file>qml/dialer/DialerKey.qml</file>
+        <file>qml/home/HomeButton.qml</file>
+        <file>qml/home/HomeComponent.qml</file>
+        <file>img/addressbookBG.png</file>
+        <file>img/avatar.png</file>
+        <file>img/contact_alice1.png</file>
+        <file>img/contact_alice2.png</file>
+        <file>img/contact_bob1.png</file>
+        <file>img/contact_bob2.png</file>
+        <file>img/contact_johndoe1.png</file>
+        <file>img/contact_johndoe2.png</file>
+        <file>img/dialerBG.png</file>
+        <file>img/dialerkey_call.png</file>
+        <file>img/dialerkey_clear.png</file>
+        <file>img/dialerkey_down.png</file>
+        <file>img/dialerkey_green.png</file>
+        <file>img/dialerkey_red.png</file>
+        <file>img/homeBG.png</file>
+        <file>img/homebutton_calendar.png</file>
+        <file>img/homebutton_contacts.png</file>
+        <file>img/homebutton_phone.png</file>
+        <file>img/homebutton_sms.png</file>
+        <file>qml/PhoneAppMain.qml</file>
+        <file>qml/BackButton.qml</file>
+    </qresource>
+</RCC>

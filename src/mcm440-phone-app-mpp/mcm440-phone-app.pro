@@ -1,4 +1,13 @@
 QT += dbus declarative
+TARGET = mcm440-phone-app
+
+TEMPLATE = app
+unix {
+    BINDIR = $$PREFIX/bin
+    #MAKE INSTALL
+    INSTALLS += target
+    target.path = $$BINDIR
+}
 
 SOURCES += \
     srcgen/OfonoModem.cpp\
@@ -16,12 +25,15 @@ HEADERS += \
 
 OTHER_FILES += \
     ## QML
-    qml/PhoneAppMain.qml \
+    qml/addressbook/AddressBookComponent.qml \
+    qml/addressbook/AddressEntry.qml \
+    qml/callhandling/CallhandlingComponent.qml \
     qml/dialer/DialerKey.qml \
     qml/dialer/DialerDisplay.qml \
     qml/dialer/DialerComponent.qml \
     qml/home/HomeComponent.qml \
-    qml/addressbook/AddressBookComponent.qml \
+    qml/home/HomeButton.qml \
+    qml/PhoneAppMain.qml \
     ## IMG
     img/dialerBG.png \
     img/dialerkey_call.png \
@@ -34,4 +46,22 @@ OTHER_FILES += \
     ## TXT
     txt/README.txt \
     txt/Questions.txt \
-    txt/TODOS.txt
+    txt/TODOS.txt \
+    txt/TODOS_DONE.txt \
+    img/homebutton_sms.png \
+    img/homebutton_phone.png \
+    img/homebutton_contacts.png \
+    img/homebutton_calendar.png \
+    img/homeBG.png \
+    img/contact_johndoe2.png \
+    img/contact_johndoe1.png \
+    img/contact_bob2.png \
+    img/contact_bob1.png \
+    img/contact_alice2.png \
+    img/contact_alice1.png \
+    img/avatar.png \
+    img/addressbookBG.png
+
+
+RESOURCES += \
+    main.qrc

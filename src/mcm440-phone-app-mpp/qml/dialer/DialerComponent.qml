@@ -1,4 +1,5 @@
 import Qt 4.7
+import "../"
 
 /**
 * DialerComponent.qml is the main part of the application / qml file for the phone application and
@@ -6,6 +7,7 @@ import Qt 4.7
  *
 **/
 Rectangle {
+    id: dialer
     // properties
     property int col1origin: 0;
     property int col2origin: 107;
@@ -15,13 +17,14 @@ Rectangle {
     property int row3origin: 212;
     property int row4origin: 282;
     property int row5origin: 352;
+    property bool isCalling: false
 
     width: 320
-    height: 440
+    height: 480
 
     //background image
     Image {
-        id: buttonimage
+        id: background
         source: "../../img/dialerBG.png"
     }
 
@@ -139,8 +142,10 @@ Rectangle {
         onClicked: {
             if(OfonoContext.getModemStatus()) {
                 OfonoContext.powerModemOff();
+                OfonoContext.getModemStatus() ? "OFF" : "ON"
             } else {
                 OfonoContext.powerModemOn();
+                OfonoContext.getModemStatus() ? "OFF" : "ON"
             }
         }
     }
@@ -152,7 +157,17 @@ Rectangle {
         y: row5origin
         icon: "../../img/dialerkey_call.png"
         backgroundimage: "../../img/dialerkey_green.png"
-        onClicked: { OfonoContext.dialNumber(display.text); }
+        onClicked: {
+            if( dialer.isCalling == false ) {           
+                OfonoContext.dialNumber(display.text);
+            }
+            else {
+                dialer.isCalling = false;
+                key_call.backgroundimage = "../../img/dialerkey_green.png";
+                OfonoContext.hangupAll();
+                display.text ="";
+            }
+        }
     }
 
     //clear button
@@ -162,5 +177,25 @@ Rectangle {
         y: row5origin
         icon: "../../img/dialerkey_clear.png"
         onClicked: { display.text = ""; }
+    }
+
+    //back button
+    BackButton {
+        x: 0
+        y: 450
+        width: 320
+        height: 20
+        onClicked: {
+            phoneAppMain.showComponent = "home"
+        }
+    }
+
+    Connections {
+        target: OfonoContext
+        onOutgoingCall: {
+            console.log("QML: OutgoingCall Call: " + id);
+            dialer.isCalling = true;
+            key_call.backgroundimage = "../../img/dialerkey_red.png";
+        }
     }
 }

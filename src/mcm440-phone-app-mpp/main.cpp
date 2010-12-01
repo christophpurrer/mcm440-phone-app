@@ -19,12 +19,14 @@
 int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
-
     QDeclarativeView view;
+
     Gsm *gsm = new Gsm();
+    gsm->powerModemOn();
 
     view.rootContext()->setContextProperty("OfonoContext", gsm);
-    view.setSource(QUrl::fromLocalFile("qml/PhoneAppMain.qml"));
+    // view.setSource(QUrl::fromLocalFile("qml/PhoneAppMain.qml"));
+    view.setSource(QUrl("qrc:/qml/PhoneAppMain.qml"));
     view.show();
 
     return a.exec();

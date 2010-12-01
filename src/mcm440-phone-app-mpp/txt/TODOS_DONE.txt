@@ -1,0 +1,9 @@
+2010-11-29
+* How to implement K-Drive X-Server?
+    >> should be handled by import statement in the mcm440-phone-app recipe file
+
+* Is our recipe fine?
+    >> Yes; looks like the screenshot from guenther
+
+* Use a QtResource file to put the resources into the binary
+    >> main.qrc should work

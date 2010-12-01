@@ -1,7 +1,11 @@
+* Add QML / Qt / C++ functionalities as listened below:
+
 The application should have a:
     * start screen (turns on the modem)
     * dial screen to dial numbers
     * status screen while a call is initiated
     * a simple / fake address book screen
 
-The application should be albe to make AND accept phone calls
+>> The application should be able to make AND accept phone calls
+
+>> Add images for the start screen or the addressBook screen

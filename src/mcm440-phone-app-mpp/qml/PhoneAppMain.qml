@@ -1,4 +1,5 @@
 import Qt 4.7
+import "callhandling"
 import "dialer"
 import "home"
 import "addressbook"
@@ -6,7 +7,7 @@ import "addressbook"
 Rectangle {
     id:phoneAppMain
     width:320
-    height:520
+    height:480
 
     property string showComponent : "home"
 
@@ -23,11 +24,12 @@ Rectangle {
 
     AddressBookComponent {
         id:addressBook
-        x:640
+        x:320
     }
 
     // buttons to control the main application
-    Text {
+    /*Text {
+        id:buttonHome
         x: 20
         y: 490
         color: "blue"
@@ -42,6 +44,7 @@ Rectangle {
     }
 
     Text {
+        id:buttonCall
         x: 80
         y: 490
         color: "red"
@@ -56,6 +59,7 @@ Rectangle {
     }
 
     Text {
+        id:buttonAddressBook
         x: 140
         y: 490
         color: "green"
@@ -67,7 +71,7 @@ Rectangle {
                 phoneAppMain.showComponent = "addressBook"
             }
         }
-    }
+    }*/
 
     // states
     states: [
@@ -81,7 +85,7 @@ Rectangle {
                 target: dialer; x : 320
             }
             PropertyChanges {
-                target: addressBook; x : 640
+                target: addressBook; x : 320
             }
         },
         State {
@@ -94,17 +98,17 @@ Rectangle {
                 target: dialer; x : 0
             }
             PropertyChanges {
-                target: addressBook; x : 320
+                target: addressBook; x : 640
             }
         },
         State {
             name: "addressBookState";
             when: phoneAppMain.showComponent == "addressBook";
             PropertyChanges {
-                target: home; x : -640
+                target: home; x : -320
             }
             PropertyChanges {
-                target: dialer; x : -320
+                target: dialer; x : 320
             }
             PropertyChanges {
                 target: addressBook; x : 0
@@ -129,4 +133,33 @@ Rectangle {
             NumberAnimation { properties: "x"; duration: 500 }
         }
     ]
+
+    Connections {
+        target: OfonoContext
+        onIncomingCall: {
+            console.log("QML: Incoming Call: " + id);
+            phoneAppMain.showAcceptCallDialog(true);
+        }
+    }
+
+
+    function showAcceptCallDialog(show) {
+        if( show == true ) {
+            callingHandling.visible=true;
+//            buttonAddressBook.enabled=false;
+//            buttonCall.enabled=false;
+//            buttonHome.enabled=false;
+        }
+        else {
+            callingHandling.opacity=0;
+//            buttonAddressBook.visible=false;
+//            buttonCall.enabled=true;
+//            buttonHome.enabled=true;
+        }
+    }
+
+    CallhandlingComponent {
+        id:callingHandling
+        visible:false
+    }
 }

@@ -80,7 +80,12 @@ bool Gsm::getModemStatus() {
 
 void Gsm::propertyChanged(const QString &name, const QDBusVariant &value) {
 
-    qDebug() << "propertyChanged2";
+    qDebug() << "propertyChanged: " << name;
+    const QVariant var = value.variant();
+    const QDBusArgument arg = var.value<QDBusArgument>();
+    QList<QString> calls;
+    arg >> calls;
+    qDebug() << calls;
 
     if(name == "Calls") {
         const QVariant var = value.variant();

@@ -1,6 +1,6 @@
 #mcm440-phone-app-image
 #gives you a an awesome beagleboard image with fancy functionality
-PR = "r7"
+PR = "r9"
 
 require recipes/images/base-image.bb
 

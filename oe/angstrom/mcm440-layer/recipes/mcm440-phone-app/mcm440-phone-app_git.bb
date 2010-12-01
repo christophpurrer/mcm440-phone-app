@@ -1,7 +1,7 @@
 DESCRIPTION = "MCM440-phone-app Application"
 LICENSE = "GPL"
 # Increase the version counter if this file get changed, after bitbake has built it already once successfully
-PR = "r11"
+PR = "r12"
 
 
 SRC_URI = "git://github.com/christophpurrer/mcm440-phone-app.git;protocol=http;tag=master"

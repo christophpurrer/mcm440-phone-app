@@ -19,7 +19,7 @@ export IMAGE_BASENAME = "mcm440-phone-app-image"
 #inherit image
 
 # change some configuration files in the rootfilesystem
-mcm440-phone-app-image_rootfs_postprocess() {
+mcm440_phone_app_image_rootfs_postprocess() {
 	curdir=$PWD
 	cd ${IMAGE_ROOTFS}
 
@@ -44,4 +44,4 @@ mcm440-phone-app-image_rootfs_postprocess() {
 }
 
 # register the above command for execution
-# ROOTFS_POSTPROCESS_COMMAND += "mcm440-phone-app-image_rootfs_postprocess"
+ROOTFS_POSTPROCESS_COMMAND += "mcm440_phone_app_image_rootfs_postprocess"

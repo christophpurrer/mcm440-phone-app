@@ -18,6 +18,7 @@ Rectangle {
     property int row4origin: 282;
     property int row5origin: 352;
     property bool isCalling: false
+    property string phonenumber
 
     width: 320
     height: 480
@@ -33,6 +34,7 @@ Rectangle {
         id: display
         x: col1origin
         y: 5
+        text: phonenumber
     }
 
     // create the number pad buttons (1-9,0, #,*)
@@ -41,7 +43,7 @@ Rectangle {
         x: col1origin
         y: row1origin
         text: "1"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -49,7 +51,7 @@ Rectangle {
         x: col2origin
         y: row1origin
         text: "2"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -57,7 +59,7 @@ Rectangle {
         x: col3origin
         y: row1origin
         text: "3"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -65,7 +67,7 @@ Rectangle {
         x: col1origin
         y: row2origin
         text: "4"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -73,7 +75,7 @@ Rectangle {
         x: col2origin
         y: row2origin
         text: "5"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -81,7 +83,7 @@ Rectangle {
         x: col3origin
         y: row2origin
         text: "6"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -89,7 +91,7 @@ Rectangle {
         x: col1origin
         y: row3origin
         text: "7"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -97,7 +99,7 @@ Rectangle {
         x: col2origin
         y: row3origin
         text: "8"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -105,7 +107,7 @@ Rectangle {
         x: col3origin
         y: row3origin
         text: "9"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -113,7 +115,7 @@ Rectangle {
         x: col1origin
         y: row4origin
         text: "*"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -121,7 +123,7 @@ Rectangle {
         x: col2origin
         y: row4origin
         text: "0"
-        onClicked: {display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     DialerKey {
@@ -129,7 +131,7 @@ Rectangle {
         x: col3origin
         y: row4origin
         text: "#"
-        onClicked: { display.text += text;}
+        onClicked: {phonenumber += text;}
     }
 
     //power toggle button
@@ -159,13 +161,13 @@ Rectangle {
         backgroundimage: "../../img/dialerkey_green.png"
         onClicked: {
             if( dialer.isCalling == false ) {           
-                OfonoContext.dialNumber(display.text);
+                OfonoContext.dialNumber(phonenumber);
             }
             else {
                 dialer.isCalling = false;
                 key_call.backgroundimage = "../../img/dialerkey_green.png";
                 OfonoContext.hangupAll();
-                display.text ="";
+                phonenumber ="";
             }
         }
     }
@@ -176,7 +178,7 @@ Rectangle {
         x: col3origin
         y: row5origin
         icon: "../../img/dialerkey_clear.png"
-        onClicked: { display.text = ""; }
+        onClicked: { phonenumber = ""; }
     }
 
     //back button

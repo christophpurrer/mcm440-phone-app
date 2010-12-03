@@ -13,7 +13,7 @@ Item {
     Text {
         id: displaytext
         text: dialerdisplay.text
-        font.pixelSize: 40
+        font.pixelSize: 36
         font.bold: true
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter

@@ -29,5 +29,6 @@
         <file>img/homebutton_sms.png</file>
         <file>qml/PhoneAppMain.qml</file>
         <file>qml/BackButton.qml</file>
+        <file>img/contact_new.png</file>
     </qresource>
 </RCC>

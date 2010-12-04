@@ -11,67 +11,21 @@ Rectangle {
 
     property string showComponent : "home"
 
-    // define all the UI components
+    // buttons to control the main application
     HomeComponent {
         id:home
-        x:0
+        opacity: 1
     }
 
     DialerComponent {
         id:dialer
-        x:320
+        opacity: 0
     }
 
     AddressBookComponent {
         id:addressBook
-        x:320
+        opacity: 0
     }
-
-    // buttons to control the main application
-    /*Text {
-        id:buttonHome
-        x: 20
-        y: 490
-        color: "blue"
-        text: "Home"
-
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                phoneAppMain.showComponent = "home"
-            }
-        }
-    }
-
-    Text {
-        id:buttonCall
-        x: 80
-        y: 490
-        color: "red"
-        text: "Call"
-
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                phoneAppMain.showComponent = "dialer"
-            }
-        }        
-    }
-
-    Text {
-        id:buttonAddressBook
-        x: 140
-        y: 490
-        color: "green"
-        text: "AddressBook"
-
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                phoneAppMain.showComponent = "addressBook"
-            }
-        }
-    }*/
 
     // states
     states: [
@@ -79,39 +33,39 @@ Rectangle {
             name: "homeState";
             when: phoneAppMain.showComponent == "home";
             PropertyChanges {
-                target: home; x : 0
+                target: home; opacity : 1
             }
             PropertyChanges {
-                target: dialer; x : 320
+                target: dialer; opacity : 0
             }
             PropertyChanges {
-                target: addressBook; x : 320
+                target: addressBook; opacity : 0
             }
         },
         State {
             name: "dialerState";
             when: phoneAppMain.showComponent == "dialer";
             PropertyChanges {
-                target: home; x : -320
+                target: home; opacity : 0
             }
             PropertyChanges {
-                target: dialer; x : 0
+                target: dialer; opacity : 1
             }
             PropertyChanges {
-                target: addressBook; x : 640
+                target: addressBook; opacity : 0
             }
         },
         State {
             name: "addressBookState";
             when: phoneAppMain.showComponent == "addressBook";
             PropertyChanges {
-                target: home; x : -320
+                target: home; opacity : 0
             }
             PropertyChanges {
-                target: dialer; x : 320
+                target: dialer; opacity : 0
             }
             PropertyChanges {
-                target: addressBook; x : 0
+                target: addressBook; opacity : 1
             }
         }
     ]
@@ -120,17 +74,17 @@ Rectangle {
     transitions: [
         Transition {
             to: "homeState"; reversible: true
-            NumberAnimation { properties: "x"; duration: 500 }
+            NumberAnimation { properties: "opacity"; duration: 500 }
         },
 
         Transition {
             to: "dialerState"; reversible: true
-            NumberAnimation { properties: "x"; duration: 500 }
+            NumberAnimation { properties: "opacity"; duration: 500 }
         },
 
         Transition {
             to: "addressBookState"; reversible: true
-            NumberAnimation { properties: "x"; duration: 500 }
+            NumberAnimation { properties: "opacity"; duration: 500 }
         }
     ]
 

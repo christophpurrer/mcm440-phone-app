@@ -16,7 +16,6 @@ SOURCES += \
     src/gsm.cpp \
     main.cpp
 
-
 HEADERS += \
     srcgen/OfonoModem.h\
     srcgen/OfonoSimManager.h\
@@ -41,6 +40,20 @@ OTHER_FILES += \
     img/dialerkey_down.png \
     img/dialerkey_green.png \
     img/dialerkey_red.png \
+    img/homeBG.png \
+    img/homebutton_sms.png \
+    img/homebutton_phone.png \
+    img/homebutton_contacts.png \
+    img/homebutton_calendar.png \
+    img/addressbookBG.png \
+    img/contact_johndoe2.png \
+    img/contact_johndoe1.png \
+    img/contact_bob2.png \
+    img/contact_bob1.png \
+    img/contact_alice2.png \
+    img/contact_alice1.png \
+    img/contact_new.png \
+    img/avatar.png \
     ## JS
     js/dummy.js \
     ## TXT
@@ -48,20 +61,7 @@ OTHER_FILES += \
     txt/Questions.txt \
     txt/TODOS.txt \
     txt/TODOS_DONE.txt \
-    img/homebutton_sms.png \
-    img/homebutton_phone.png \
-    img/homebutton_contacts.png \
-    img/homebutton_calendar.png \
-    img/homeBG.png \
-    img/contact_johndoe2.png \
-    img/contact_johndoe1.png \
-    img/contact_bob2.png \
-    img/contact_bob1.png \
-    img/contact_alice2.png \
-    img/contact_alice1.png \
-    img/avatar.png \
-    img/addressbookBG.png
-
+    qml/BackButton.qml
 
 RESOURCES += \
     main.qrc

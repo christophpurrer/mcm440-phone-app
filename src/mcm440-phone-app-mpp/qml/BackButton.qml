@@ -9,7 +9,7 @@ Item {
 
     Text {
         id: buttontext
-        text: "< BACK"
+        text: "< HOME"
         font.bold: true
         font.pixelSize: 30
         color: "#ffffff"

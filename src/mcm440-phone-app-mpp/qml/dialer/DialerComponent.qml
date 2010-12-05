@@ -199,5 +199,10 @@ Rectangle {
             dialer.isCalling = true;
             key_call.backgroundimage = "../../img/dialerkey_red.png";
         }
+        onEndCall: {
+            console.log("QML: EndCall Call: " + id);
+            dialer.isCalling = true;
+            key_call.backgroundimage = "../../img/dialerkey_green.png";
+        }
     }
 }

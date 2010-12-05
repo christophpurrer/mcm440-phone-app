@@ -39,6 +39,7 @@ public:
 signals:
     void incomingCall(QString id);
     void outgoingCall(QString id);
+    void endCall(QString id);
 
 public slots:    
     /**

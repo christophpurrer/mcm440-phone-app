@@ -16,6 +16,7 @@
  * @file
  * @author  Christoph Purrer <S1010455012@students.fh-hagenberg.at>
  * @author  Kathrin Probst <S0910629019@students.fh-hagenberg.at>
+ * @author  Alexander Moosbrugger <S10104550111@students.fh-hagenberg.at>
  * @version 0.1
  *
  * @section DESCRIPTION
@@ -23,8 +24,8 @@
  * gsm.h implementation
  */
 
-OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim", QDBusConnection::systemBus());
-OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim", QDBusConnection::systemBus());
+OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim0", QDBusConnection::systemBus());
+OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim0", QDBusConnection::systemBus());
 
 // constructor
 Gsm::Gsm(QObject *parent) : QObject(parent) {
@@ -69,6 +70,7 @@ bool Gsm::dialNumber(QString number) {
 // hangup all phone calls
 bool Gsm::hangupAll() {
     ofonoVoicecallManager.HangupAll();
+    return true;
 }
 
 // returns the modemStatus
@@ -85,15 +87,6 @@ bool Gsm::getModemStatus() {
     return powered.value<bool>();
 }
 
-
-<<<<<<< HEAD
-    qDebug() << "propertyChanged: " << name;
-    const QVariant var = value.variant();
-    const QDBusArgument arg = var.value<QDBusArgument>();
-    QList<QString> calls;
-    arg >> calls;
-    qDebug() << calls;
-=======
 void Gsm::modemPropertyChanged(const QString &name, const QDBusVariant &value) {
     qDebug() << "modemPropertyChanged";
     const QVariant var = value.variant();
@@ -101,7 +94,6 @@ void Gsm::modemPropertyChanged(const QString &name, const QDBusVariant &value) {
     QList<QString> values;
     arg >> values;
     qDebug() << values;
->>>>>>> 29b52dd2299582df5b0d53b286814d7f6650ecff
 
     if(name == "Calls") {
     }
@@ -129,18 +121,17 @@ void Gsm::voicecallManagerPropertyChanged(const QString &name, const QDBusVarian
     const QDBusArgument arg = var.value<QDBusArgument>();
     QList<QString> values;
     arg >> values;
-    qDebug() << values;
+    //qDebug() << "values" << values << " ,length: " << values.length();
+
+    //qDebug() << "Befehl: " << name;
+
     if(name == "Calls") {
-        this->incomingCall("test");
+        if ( values.length() > 0 ){
+            this->outgoingCall("outGoingCall");
+        }
+        else {
+            this->endCall("endCall");
+        }
+
     }
 }
-
-// signal
-//void Gsm::incomingCall(QString id) {
-//    qDebug() << "incomingCall" << id;
-//}
-
-
-//void Gsm::outgoingCall(QString id) {
-//    qDebug() << "outgoingCall" << id;
-//}

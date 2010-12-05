@@ -139,15 +139,22 @@ Rectangle {
         id: key_power
         x: col1origin
         y: row5origin
-        text: OfonoContext.getModemStatus() ? "OFF" : "ON"
+        text: "ON"
         fontsize: 30
+        Connections {
+            target:OfonoContext
+            onPowerOn: {
+                key_power.text = "OFF";
+            }
+            onPowerOff: {
+                key_power.text = "ON";
+            }
+        }
         onClicked: {
-            if(OfonoContext.getModemStatus()) {
+            if(key_power.text == "OFF") {
                 OfonoContext.powerModemOff();
-                OfonoContext.getModemStatus() ? "OFF" : "ON"
             } else {
-                OfonoContext.powerModemOn();
-                OfonoContext.getModemStatus() ? "OFF" : "ON"
+               OfonoContext.powerModemOn();
             }
         }
     }

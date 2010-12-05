@@ -24,8 +24,8 @@
  * gsm.h implementation
  */
 
-OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim", QDBusConnection::systemBus());
-OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim", QDBusConnection::systemBus());
+OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim0", QDBusConnection::systemBus());
+OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim0", QDBusConnection::systemBus());
 
 // constructor
 Gsm::Gsm(QObject *parent) : QObject(parent) {
@@ -108,6 +108,11 @@ void Gsm::modemPropertyChanged(const QString &name, const QDBusVariant &value) {
     else if(name == "Online") {
     }
     else if(name == "Powered") {
+        if(var.toBool() == true) {
+            emit powerOn();
+        } else if(var.toBool() == false) {
+            emit powerOff();
+        }
     }
     else if(name == "Revision") {
     }

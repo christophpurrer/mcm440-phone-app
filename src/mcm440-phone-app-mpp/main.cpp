@@ -22,7 +22,7 @@ int main(int argc, char **argv)
     QDeclarativeView view;
 
     Gsm *gsm = new Gsm();
-    gsm->powerModemOn();
+    //gsm->powerModemOn();
 
     view.rootContext()->setContextProperty("OfonoContext", gsm);
     // view.setSource(QUrl::fromLocalFile("qml/PhoneAppMain.qml"));

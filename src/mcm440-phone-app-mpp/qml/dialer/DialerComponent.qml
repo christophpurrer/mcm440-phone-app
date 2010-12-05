@@ -139,7 +139,7 @@ Rectangle {
         id: key_power
         x: col1origin
         y: row5origin
-        text: "OFF"
+        text: "ON"
         fontsize: 30
         Connections {
             target:OfonoContext

@@ -37,6 +37,8 @@ public:
     Q_INVOKABLE bool getModemStatus();
 
 signals:
+    void powerOn();
+    void powerOff();
     void incomingCall(QString id);
     void outgoingCall(QString id);
     void endCall(QString id);

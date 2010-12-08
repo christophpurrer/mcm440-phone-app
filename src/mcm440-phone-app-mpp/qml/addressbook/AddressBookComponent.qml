@@ -10,28 +10,6 @@ Rectangle {
     width: 320
     height: 480
 
-    /*Rectangle {
-        color:"red"
-        anchors.fill:parent
-
-        Column {
-            spacing:6
-            Row {
-                 AddressEntry{
-                     name:"Max Mustermann"
-                 }
-
-                 AddressEntry{
-                     name:"Maxi Musterfrau"
-                 }
-
-                 AddressEntry{
-                     name:"Herbert Prohaska"
-                 }
-            }
-        }
-    }*/
-
     //background image
     Image {
         id: background
@@ -49,9 +27,10 @@ Rectangle {
                 currentImage = image_back;
             } else {
                 currentImage = image_front;
-                phoneAppMain.showComponent = "dialer";
-                dialer.phonenumber = "06641764140";
-                OfonoContext.dialNumber(dialer.phonenumber);
+                call.call_type = "outgoing"
+                call.number = "06641764140";
+                phoneAppMain.showComponent = "call";
+                OfonoContext.dialNumber("06641764140");
             }
         }
     }
@@ -67,9 +46,10 @@ Rectangle {
                 currentImage = image_back;
             } else {
                 currentImage = image_front;
-                phoneAppMain.showComponent = "dialer";
-                dialer.phonenumber = "06767708182";
-                OfonoContext.dialNumber(dialer.phonenumber);
+                call.call_type = "outgoing"
+                call.number = "06767708182";
+                phoneAppMain.showComponent = "call";
+                OfonoContext.dialNumber("06767708182");
             }
         }
     }
@@ -85,9 +65,10 @@ Rectangle {
                 currentImage = image_back;
             } else {
                 currentImage = image_front;
-                phoneAppMain.showComponent = "dialer";
-                dialer.phonenumber = "06605615859";
-                OfonoContext.dialNumber(dialer.phonenumber);
+                call.call_type = "outgoing"
+                call.number = "06605615859";
+                phoneAppMain.showComponent = "call";
+                OfonoContext.dialNumber("06605615859");
             }
         }
     }

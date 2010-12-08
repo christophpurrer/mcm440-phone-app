@@ -61,7 +61,14 @@ OTHER_FILES += \
     txt/Questions.txt \
     txt/TODOS.txt \
     txt/TODOS_DONE.txt \
-    qml/BackButton.qml
+    qml/BackButton.qml \
+    img/call_hangup.png \
+    img/call_deny.png \
+    img/callBG.png \
+    img/call_accept.png \
+    qml/dialer/CallScreen.qml \
+    qml/callhanding/CallHandlingComponent.qml \
+    qml/callhandling/CallHandlingComponent.qml
 
 RESOURCES += \
     main.qrc

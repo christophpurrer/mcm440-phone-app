@@ -1,20 +1,20 @@
 import Qt 4.7
-import "callhandling"
 import "dialer"
 import "home"
 import "addressbook"
+import "callhandling"
 
 Rectangle {
-    id:phoneAppMain
-    width:320
-    height:480
+    id: phoneAppMain
+    width: 320
+    height: 480
 
     property string showComponent : "home"
 
     // buttons to control the main application
     HomeComponent {
         id:home
-        opacity: 1
+        opacity: 0
     }
 
     DialerComponent {
@@ -25,6 +25,11 @@ Rectangle {
     AddressBookComponent {
         id:addressBook
         opacity: 0
+    }
+
+    CallHandlingComponent {
+        id: call
+        opacity: 1
     }
 
     // states
@@ -41,6 +46,9 @@ Rectangle {
             PropertyChanges {
                 target: addressBook; opacity : 0
             }
+            PropertyChanges {
+                target: call; opacity: 0
+            }
         },
         State {
             name: "dialerState";
@@ -53,6 +61,9 @@ Rectangle {
             }
             PropertyChanges {
                 target: addressBook; opacity : 0
+            }
+            PropertyChanges {
+                target: call; opacity: 0
             }
         },
         State {
@@ -67,6 +78,25 @@ Rectangle {
             PropertyChanges {
                 target: addressBook; opacity : 1
             }
+            PropertyChanges {
+                target: call; opacity: 0
+            }
+        },
+        State {
+            name: "callState";
+            when: phoneAppMain.showComponent == "call";
+            PropertyChanges {
+                target: home; opacity: 0
+            }
+            PropertyChanges {
+                target: dialer; opacity: 0
+            }
+            PropertyChanges {
+                target: addressBook; opacity: 0
+            }
+            PropertyChanges {
+                target: call; opacity: 1
+            }
         }
     ]
 
@@ -76,44 +106,17 @@ Rectangle {
             to: "homeState"; reversible: true
             NumberAnimation { properties: "opacity"; duration: 500 }
         },
-
         Transition {
             to: "dialerState"; reversible: true
             NumberAnimation { properties: "opacity"; duration: 500 }
         },
-
         Transition {
             to: "addressBookState"; reversible: true
             NumberAnimation { properties: "opacity"; duration: 500 }
+        },
+        Transition {
+            to: "callState"; reversible: true
+            NumberAnimation { properties: "opacity"; duration: 500 }
         }
     ]
-
-    Connections {
-        target: OfonoContext
-        onIncomingCall: {
-            console.log("QML: Incoming Call: " + id);
-            phoneAppMain.showAcceptCallDialog(true);
-        }
-    }
-
-
-    function showAcceptCallDialog(show) {
-        if( show == true ) {
-            callingHandling.visible=true;
-//            buttonAddressBook.enabled=false;
-//            buttonCall.enabled=false;
-//            buttonHome.enabled=false;
-        }
-        else {
-            callingHandling.opacity=0;
-//            buttonAddressBook.visible=false;
-//            buttonCall.enabled=true;
-//            buttonHome.enabled=true;
-        }
-    }
-
-    CallhandlingComponent {
-        id:callingHandling
-        visible:false
-    }
 }

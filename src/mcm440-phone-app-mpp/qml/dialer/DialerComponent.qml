@@ -17,7 +17,6 @@ Rectangle {
     property int row3origin: 212;
     property int row4origin: 282;
     property int row5origin: 352;
-    property bool isCalling: false
     property string phonenumber
 
     width: 320
@@ -167,14 +166,10 @@ Rectangle {
         icon: "../../img/dialerkey_call.png"
         backgroundimage: "../../img/dialerkey_green.png"
         onClicked: {
-            if( dialer.isCalling == false ) {           
-                OfonoContext.dialNumber(phonenumber);
-            }
-            else {
-                dialer.isCalling = false;
-                key_call.backgroundimage = "../../img/dialerkey_green.png";
-                OfonoContext.hangupAll();
-                phonenumber ="";
+            if(phonenumber != "") {
+                call.call_type = "outgoing";
+                call.number = phonenumber;
+                phoneAppMain.showComponent = "call";
             }
         }
     }
@@ -204,12 +199,13 @@ Rectangle {
         onOutgoingCall: {
             console.log("QML: OutgoingCall Call: " + id);
             dialer.isCalling = true;
-            key_call.backgroundimage = "../../img/dialerkey_red.png";
+            //key_call.backgroundimage = "../../img/dialerkey_red.png";
         }
         onEndCall: {
             console.log("QML: EndCall Call: " + id);
             dialer.isCalling = true;
-            key_call.backgroundimage = "../../img/dialerkey_green.png";
+            phonenumber ="";
+            //key_call.backgroundimage = "../../img/dialerkey_green.png";
         }
     }
 }

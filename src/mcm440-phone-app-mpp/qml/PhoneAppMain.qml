@@ -29,7 +29,7 @@ Rectangle {
 
     CallHandlingComponent {
         id: call
-        opacity: 1
+        opacity: 0
     }
 
     // states
@@ -104,19 +104,19 @@ Rectangle {
     transitions: [
         Transition {
             to: "homeState"; reversible: true
-            NumberAnimation { properties: "opacity"; duration: 500 }
+            NumberAnimation { properties: "opacity"; duration: 400 }
         },
         Transition {
             to: "dialerState"; reversible: true
-            NumberAnimation { properties: "opacity"; duration: 500 }
+            NumberAnimation { properties: "opacity"; duration: 400 }
         },
         Transition {
             to: "addressBookState"; reversible: true
-            NumberAnimation { properties: "opacity"; duration: 500 }
+            NumberAnimation { properties: "opacity"; duration: 400 }
         },
         Transition {
             to: "callState"; reversible: true
-            NumberAnimation { properties: "opacity"; duration: 500 }
+            NumberAnimation { properties: "opacity"; duration: 400 }
         }
     ]
 }

@@ -31,7 +31,7 @@ OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim"
 Gsm::Gsm(QObject *parent) : QObject(parent) {
     this->isConnected=false;
 
-    qDebug()<<"start";
+    qDebug()<<"Gsm start";
 
     // register to certain slots to get notified about events
     QObject::connect( &ofonoModem, SIGNAL(PropertyChanged(QString,QDBusVariant)), this, SLOT(modemPropertyChanged(QString,QDBusVariant)));
@@ -40,21 +40,21 @@ Gsm::Gsm(QObject *parent) : QObject(parent) {
 
 // turns the modem on
 bool Gsm::powerModemOn() {
-    qDebug() << "powerModemOn";
+    qDebug() << "Gsm powerModemOn";
     ofonoModem.SetProperty("Powered", QDBusVariant(true));
     return true;
 }
 
 // shuts the modem down
 bool Gsm::powerModemOff() {
-    qDebug() << "powerModemOff";
+    qDebug() << "Gsm powerModemOff";
     ofonoModem.SetProperty("Powered", QDBusVariant(false));
     return true;
 }
 
 // dials a number
 bool Gsm::dialNumber(QString number) {
-    // qDebug() << "callNumber" << number;
+    // qDebug() << "Gsm callNumber" << number;
     this->isConnected = this->getModemStatus();
     // qDebug() << "modemStatus" << this->isConnected;
     if( this->isConnected==false ){
@@ -91,12 +91,12 @@ bool Gsm::getModemStatus() {
 }
 
 void Gsm::modemPropertyChanged(const QString &name, const QDBusVariant &value) {
-    qDebug() << "modemPropertyChanged";
+    // qDebug() << "modemPropertyChanged";
     const QVariant var = value.variant();
     const QDBusArgument arg = var.value<QDBusArgument>();
     QList<QString> values;
     arg >> values;
-    qDebug() << values;
+    // qDebug() << values;
 
     if(name == "Calls") {
     }
@@ -111,11 +111,11 @@ void Gsm::modemPropertyChanged(const QString &name, const QDBusVariant &value) {
     else if(name == "Online") {
     }
     else if(name == "Powered") {
-        if(var.toBool() == true) {
-            emit powerOn();
-        } else if(var.toBool() == false) {
-            emit powerOff();
-        }
+//        if(var.toBool() == true) {
+//            emit powerOn();
+//        } else if(var.toBool() == false) {
+//            emit powerOff();
+//        }
     }
     else if(name == "Revision") {
     }

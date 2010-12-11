@@ -151,9 +151,11 @@ Rectangle {
         }
         onClicked: {
             if(key_power.text == "OFF") {
+                console.log("QML: powerModemOff: ");
                 OfonoContext.powerModemOff();
             } else {
-               OfonoContext.powerModemOn();
+                console.log("QML: powerModemOn: ");
+                OfonoContext.powerModemOn();
             }
         }
     }
@@ -170,6 +172,7 @@ Rectangle {
                 call.call_type = "outgoing";
                 call.number = phonenumber;
                 phoneAppMain.showComponent = "call";
+                OfonoContext.dialNumber(phonenumber);
             }
         }
     }
@@ -198,12 +201,12 @@ Rectangle {
         target: OfonoContext
         onOutgoingCall: {
             console.log("QML: OutgoingCall Call: " + id);
-            dialer.isCalling = true;
+            // dialer.isCalling = true;
             //key_call.backgroundimage = "../../img/dialerkey_red.png";
         }
         onEndCall: {
             console.log("QML: EndCall Call: " + id);
-            dialer.isCalling = true;
+            //dialer.isCalling = true;
             phonenumber ="";
             //key_call.backgroundimage = "../../img/dialerkey_green.png";
         }

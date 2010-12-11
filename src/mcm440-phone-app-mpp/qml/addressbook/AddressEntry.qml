@@ -79,7 +79,7 @@ Item {
     //transitions
     transitions: [
         Transition {
-            NumberAnimation { properties: "opacity"; duration: 500 }
+            NumberAnimation { properties: "opacity"; duration: 350 }
         }
     ]
 }

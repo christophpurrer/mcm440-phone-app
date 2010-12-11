@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file>qml/addressbook/AddressBookComponent.qml</file>
         <file>qml/addressbook/AddressEntry.qml</file>
-        <file>qml/callhandling/CallhandlingComponent.qml</file>
         <file>qml/dialer/DialerComponent.qml</file>
         <file>qml/dialer/DialerDisplay.qml</file>
         <file>qml/dialer/DialerKey.qml</file>
@@ -30,5 +29,10 @@
         <file>qml/PhoneAppMain.qml</file>
         <file>qml/BackButton.qml</file>
         <file>img/contact_new.png</file>
+        <file>img/call_accept.png</file>
+        <file>img/callBG.png</file>
+        <file>img/call_deny.png</file>
+        <file>img/call_hangup.png</file>
+        <file>qml/callhandling/CallHandlingComponent.qml</file>
     </qresource>
 </RCC>

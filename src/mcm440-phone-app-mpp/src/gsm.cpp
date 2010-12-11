@@ -24,8 +24,8 @@
  * gsm.h implementation
  */
 
-OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim0", QDBusConnection::systemBus());
-OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim0", QDBusConnection::systemBus());
+OrgOfonoModemInterface ofonoModem("org.ofono", "/phonesim", QDBusConnection::systemBus());
+OrgOfonoVoiceCallManagerInterface ofonoVoicecallManager("org.ofono", "/phonesim", QDBusConnection::systemBus());
 
 // constructor
 Gsm::Gsm(QObject *parent) : QObject(parent) {
@@ -57,14 +57,17 @@ bool Gsm::dialNumber(QString number) {
     // qDebug() << "callNumber" << number;
     this->isConnected = this->getModemStatus();
     // qDebug() << "modemStatus" << this->isConnected;
+    if( this->isConnected==false ){
+        this->powerModemOn();
+    }
+
     if( this->isConnected==true ){
         ofonoVoicecallManager.Dial(number, "default");
         this->outgoingCall(number);
         return true;
+
     }
-    else {
-        return false;
-    }
+    return false;
 }
 
 // hangup all phone calls

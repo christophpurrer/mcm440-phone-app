@@ -11,6 +11,7 @@ IMAGE_INSTALL += " \
 	${XSERVER} \
 	mcm440-phone-app \
 	hello \
+	task-fonts-truetype-core \
 	"
 # mcm440-phone-app \	
 

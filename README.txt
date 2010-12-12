@@ -22,6 +22,8 @@ git://github.com/christophpurrer/mcm440-phone-app.git;protocol=http;tag=master
 /doc/00 Documentation/Git/Git Repository.pdf
 /doc/01 Development/OfonoDBus/Ofono and DBus.pdf
 /doc/01 Development/QtQML/QtQML_20101209.pdf
+/doc/02 Testing/IntegrationTest.pdf
+
 
 /oe		> OpenEmbedded configuration files and images / recipes folder
 

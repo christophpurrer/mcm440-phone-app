@@ -3,8 +3,7 @@ import "../"
 
 /**
 * DialerComponent.qml is the main part of the application / qml file for the phone application and
- * shows the number pad screen / state on default
- *
+* shows the number pad screen / state on default
 **/
 Rectangle {
     id: dialer
@@ -142,11 +141,8 @@ Rectangle {
         fontsize: 30
         Connections {
             target:OfonoContext
-            onPowerOn: {
-                key_power.text = "OFF";
-            }
-            onPowerOff: {
-                key_power.text = "ON";
+            onModemPowerChanged: {
+                key_power.text = onOff;
             }
         }
         onClicked: {
@@ -168,11 +164,12 @@ Rectangle {
         icon: "../../img/dialerkey_call.png"
         backgroundimage: "../../img/dialerkey_green.png"
         onClicked: {
-            if(phonenumber != "") {
-                call.call_type = "outgoing";
-                call.number = phonenumber;
-                phoneAppMain.showComponent = "call";
-                OfonoContext.dialNumber(phonenumber);
+            if(phonenumber != "") {                
+                if(OfonoContext.dialNumber(phonenumber)==true) {
+                    call.call_type = "outgoing";
+                    call.number = phonenumber;
+                    phoneAppMain.showComponent = "call";
+                }
             }
         }
     }
@@ -199,16 +196,12 @@ Rectangle {
 
     Connections {
         target: OfonoContext
-        onOutgoingCall: {
-            console.log("QML: OutgoingCall Call: " + id);
-            // dialer.isCalling = true;
-            //key_call.backgroundimage = "../../img/dialerkey_red.png";
+        onOutGoingCallChanged: {
+            console.log("QML: OutgoingCall Call: " + number);
         }
-        onEndCall: {
-            console.log("QML: EndCall Call: " + id);
-            //dialer.isCalling = true;
+        onEndCallChanged: {
+            console.log("QML: EndCall Call: " + number);
             phonenumber ="";
-            //key_call.backgroundimage = "../../img/dialerkey_green.png";
         }
     }
 }

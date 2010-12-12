@@ -2,8 +2,8 @@ import Qt 4.7
 import "../home/"
 
 /**
-  * CallScreen is shown on outgoing/incoming calls and contains controls for answering/ending a call
-  */
+* CallScreen is shown on outgoing/incoming calls and contains controls for answering/ending a call
+*/
 Item {
     id: call
     property string call_type: "outgoing"
@@ -66,6 +66,7 @@ Item {
         enabled: true
         onClicked: {
             //accept incoming call
+            OfonoContext.releaseAndAnswer();
             call_type = "incomingActive"
         }
     }
@@ -81,6 +82,7 @@ Item {
         onClicked: {
             //refuse incoming call
             phoneAppMain.showComponent = "home"
+            OfonoContext.hangupAll();
         }
     }
 
@@ -137,11 +139,12 @@ Item {
                 target: call_deny; opacity: 0
             }
             PropertyChanges {
-                target: callingtext; y: offsetY2
+                target: callingtext; y: offsetY2; text:"CALL ..."
             }
             PropertyChanges {
                 target: numbertext; y: offsetY1
             }
+
         }
     ]
 }

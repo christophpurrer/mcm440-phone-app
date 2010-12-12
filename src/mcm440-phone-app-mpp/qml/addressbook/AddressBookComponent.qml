@@ -22,15 +22,16 @@ Rectangle {
         y: 15
         image_front: "../../img/contact_bob1.png"
         image_back: "../../img/contact_bob2.png"
+        number: "06641764140"
         onClicked: {
             if(currentImage == image_front) {
                 currentImage = image_back;
             } else {
                 currentImage = image_front;
                 call.call_type = "outgoing"
-                call.number = "06641764140";
+                call.number = contact_bob.number;
                 phoneAppMain.showComponent = "call";
-                OfonoContext.dialNumber("06641764140");
+                OfonoContext.dialNumber(contact_bob.number);
             }
         }
     }
@@ -41,15 +42,16 @@ Rectangle {
         y: 15
         image_front: "../../img/contact_alice1.png"
         image_back: "../../img/contact_alice2.png"
+        number:"06767708182"
         onClicked: {
             if(currentImage == image_front) {
                 currentImage = image_back;
             } else {
                 currentImage = image_front;
                 call.call_type = "outgoing"
-                call.number = "06767708182";
+                call.number = contact_alice.number;
                 phoneAppMain.showComponent = "call";
-                OfonoContext.dialNumber("06767708182");
+                OfonoContext.dialNumber(contact_alice.number);
             }
         }
     }
@@ -60,15 +62,16 @@ Rectangle {
         y: 150
         image_front: "../../img/contact_johndoe1.png"
         image_back: "../../img/contact_johndoe2.png"
+        number:"06605615859"
         onClicked: {
             if(currentImage == image_front) {
                 currentImage = image_back;
             } else {
                 currentImage = image_front;
                 call.call_type = "outgoing"
-                call.number = "06605615859";
+                call.number = contact_johndoe.number;
                 phoneAppMain.showComponent = "call";
-                OfonoContext.dialNumber("06605615859");
+                OfonoContext.dialNumber(contact_johndoe.number);
             }
         }
     }

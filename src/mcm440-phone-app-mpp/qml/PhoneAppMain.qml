@@ -119,4 +119,18 @@ Rectangle {
             NumberAnimation { properties: "opacity"; duration: 400 }
         }
     ]
+
+
+    Connections {
+        target: OfonoContext
+        onInComingCallChanged: {
+            console.log("QML: onIncomingCallChanged Call: " + number);
+
+            // setUp the CallComponent and switch the state
+            call.call_type = "incoming";
+            call.number = number;
+            phoneAppMain.showComponent = "call";
+
+        }
+    }
 }

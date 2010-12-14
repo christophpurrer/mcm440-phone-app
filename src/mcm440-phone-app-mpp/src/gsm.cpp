@@ -33,8 +33,8 @@ Gsm::Gsm(QObject *parent) : QObject(parent) {
     this->isModemTurnedOn=false;
     this->isDialing=false;
 
-    this->ofonoModem = new OrgOfonoModemInterface("org.ofono", "/phonesim", QDBusConnection::systemBus());
-    this->ofonoVoicecallManager = new OrgOfonoVoiceCallManagerInterface("org.ofono", "/phonesim", QDBusConnection::systemBus());
+    this->ofonoModem = new OrgOfonoModemInterface("org.ofono", "/phonesim0", QDBusConnection::systemBus());
+    this->ofonoVoicecallManager = new OrgOfonoVoiceCallManagerInterface("org.ofono", "/phonesim0", QDBusConnection::systemBus());
 
     // register to certain slots to get notified about events
     QObject::connect( this->ofonoVoicecallManager, SIGNAL(PropertyChanged(QString,QDBusVariant)), this, SLOT(voicecallManagerPropertyChanged(QString,QDBusVariant)));
